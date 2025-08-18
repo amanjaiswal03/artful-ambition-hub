@@ -26,9 +26,12 @@ function NavBar() {
   );
 }
 
-function ProjectCard({ title, description, imageSrc, rotateClass, imageScale = "scale-100" }) {
+function ProjectCard({ title, description, imageSrc, rotateClass, imageScale = "scale-100", onClick }) {
   return (
-    <div className={`w-[280px] sm:w-[340px] bg-gray-50/80 rounded-2xl shadow-[3px_3px_40px_15px_rgba(0,0,0,0.06)] p-4 ${rotateClass} transition-all duration-500 ease-out hover:rotate-3 hover:-translate-y-1 hover:translate-x-1 hover:scale-110 hover:shadow-[8px_8px_60px_25px_rgba(0,0,0,0.1)] cursor-pointer group`}>
+    <div 
+      onClick={onClick}
+      className={`w-[280px] sm:w-[340px] bg-gray-50/80 rounded-2xl shadow-[3px_3px_40px_15px_rgba(0,0,0,0.06)] p-4 ${rotateClass} transition-all duration-500 ease-out hover:rotate-3 hover:-translate-y-1 hover:translate-x-1 hover:scale-110 hover:shadow-[8px_8px_60px_25px_rgba(0,0,0,0.1)] cursor-pointer group`}
+    >
       <div className="aspect-[16/10] rounded-xl overflow-hidden bg-gray-50/80 flex items-center justify-center">
         <img src={imageSrc} alt={title} className={`max-w-full max-h-full object-contain ${imageScale} transition-all duration-500 ease-out group-hover:-rotate-2 group-hover:scale-105`} />
       </div>
@@ -53,7 +56,7 @@ function Chip({ children }) {
   );
 }
 
-export default function LandingPage() {
+export default function LandingPage({ onNavigateToLumio, onNavigateToRizing, onNavigateToDB }) {
   return (
     <div className="min-h-screen w-full bg-white">
       <NavBar />
@@ -84,6 +87,7 @@ export default function LandingPage() {
                 imageSrc={deutschlandImage}
                 rotateClass="-rotate-[3deg]"
                 imageScale="scale-[1.2]"
+                onClick={onNavigateToDB}
               />
           </div>
             
@@ -92,6 +96,7 @@ export default function LandingPage() {
               <ProjectCard
                 imageSrc={lumioImage}
                 rotateClass="rotate-[4deg]"
+                onClick={onNavigateToLumio}
               />
             </div>
 
@@ -100,6 +105,7 @@ export default function LandingPage() {
               <ProjectCard
                 imageSrc={rizingImage}
                 rotateClass="-rotate-[5deg]"
+                onClick={onNavigateToRizing}
               />
               </div>
           </div>
