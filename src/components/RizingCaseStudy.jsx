@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import rizingHero from '../../images/Rizing/rizing_hero.png';
 import rizingBrandIdentity from '../../images/Rizing/rizing_brand_identity.png';
 import rizingLogoDevelopment from '../../images/Rizing/rizing_logo_development.png';
@@ -7,7 +8,9 @@ import rizingOutcome2 from '../../images/Rizing/rizing_outcome_2.png';
 import figmaLogo from '../../images/figma_logo.svg';
 import squarespaceLogo from '../../images/squarespace_logo.png';
 
-function NavBar({ onBackToHome }) {
+function NavBar({ onBackToHome, onNavigateToLumio, onNavigateToDB }) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   return (
     <div
       className="box-border content-stretch flex flex-row items-start justify-between px-14 py-8 relative size-full"
@@ -16,28 +19,50 @@ function NavBar({ onBackToHome }) {
       <div
         className="box-border content-stretch flex flex-row font-['Helvetica_Neue:Medium',_sans-serif] gap-4 items-center justify-start leading-[0] not-italic p-0 relative shrink-0 text-[20px] text-left"
       >
-        <div className="relative shrink-0 text-[#8a8a8a] w-[157px]">
+        <button 
+          onClick={onBackToHome}
+          className="relative shrink-0 text-[#8a8a8a] w-[157px] hover:text-[#1A1A25] transition-colors cursor-pointer"
+        >
           <p className="block leading-[32px]">Sonja Weissberg</p>
-        </div>
+        </button>
         <div className="relative shrink-0 text-[#000000] w-[164px]">
           <p className="block leading-[32px]">Product Designer</p>
         </div>
       </div>
-      <div
-        className="bg-[#e9e9e9] box-border content-stretch flex flex-row gap-px h-11 items-center justify-center p-0 relative rounded-[13px] shrink-0 w-[181px]"
-      >
-        <div className="font-['Helvetica_Neue:Medium',_sans-serif] h-8 leading-[0] not-italic relative shrink-0 text-[#8e8e8e] text-[18px] text-left w-28">
-          <p className="block leading-[32px]">Case Studies</p>
-        </div>
+      <div className="relative">
         <button
-          onClick={onBackToHome}
-          className="relative shrink-0 size-8 flex items-center justify-center rounded-md hover:bg-black/5"
-          aria-label="Back"
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          className="bg-[#e9e9e9] box-border content-stretch flex flex-row gap-px h-11 items-center justify-center p-0 relative rounded-[13px] shrink-0 w-[181px] hover:bg-[#ddd] transition-colors"
         >
-          <svg className="block max-w-none size-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 18L9 12L15 6" stroke="#8e8e8e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+          <div className="font-['Helvetica_Neue:Medium',_sans-serif] h-8 leading-[0] not-italic relative shrink-0 text-[#8e8e8e] text-[18px] text-left w-28">
+            <p className="block leading-[32px]">Case Studies</p>
+          </div>
+          <div className={`relative shrink-0 size-8 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}>
+            <svg className="block max-w-none size-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="#8e8e8e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
         </button>
+        
+        {isDropdownOpen && (
+          <div className="absolute top-full right-0 mt-2 w-[181px] bg-white rounded-xl shadow-[3px_3px_40px_15px_rgba(0,0,0,0.15)] border border-gray-100 py-2 z-50">
+            <button
+              onClick={onNavigateToDB}
+              className="w-full text-left font-['Helvetica_Neue:Regular',_sans-serif] text-[#8a8a8a] text-[16px] px-4 py-2 hover:bg-gray-50 hover:text-black transition-colors"
+            >
+              Deutsche Bahn
+            </button>
+            <button
+              onClick={onNavigateToLumio}
+              className="w-full text-left font-['Helvetica_Neue:Regular',_sans-serif] text-[#8a8a8a] text-[16px] px-4 py-2 hover:bg-gray-50 hover:text-black transition-colors"
+            >
+              Lumio
+            </button>
+            <div className="font-['Helvetica_Neue:Regular',_sans-serif] text-[#000000] text-[16px] font-medium px-4 py-2 bg-gray-50">
+              Rizing
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -124,10 +149,10 @@ function FooterBar() {
   );
 }
 
-export default function RizingCaseStudy({ onBackToHome }) {
+export default function RizingCaseStudy({ onBackToHome, onNavigateToLumio, onNavigateToDB }) {
   return (
     <div className="min-h-screen w-full bg-white">
-      <NavBar onBackToHome={onBackToHome} />
+      <NavBar onBackToHome={onBackToHome} onNavigateToLumio={onNavigateToLumio} onNavigateToDB={onNavigateToDB} />
 
       <main className="pb-16">
         {/* Hero Section */}
@@ -269,8 +294,62 @@ export default function RizingCaseStudy({ onBackToHome }) {
           </div>
         </section>
 
-        <footer className="mt-16">
-          <FooterBar />
+        {/* Back to Projects CTA */}
+        <section className="max-w-md mx-auto py-16 sm:py-20 lg:py-24 text-center">
+          <button 
+            onClick={onBackToHome}
+            className="mx-auto size-[160px] sm:size-[200px] bg-[#fcf4e9] rounded-[60px] flex items-center justify-center hover:bg-[#f5e6d3] transition-colors cursor-pointer group"
+          >
+            <span className="text-[96px] group-hover:scale-110 transition-transform">👈</span>
+          </button>
+          <p className="mt-6 text-[20px] text-[#1A1A25]"> Back to all projects</p>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-white w-full py-8" data-name="Footer">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-8">
+            <div className="content-stretch flex gap-4 items-center justify-start" data-name="Copyright">
+              <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px]">
+                <p className="leading-[32px]">© 2025 Sonja Weissberg. All Rights Reserved</p>
+              </div>
+            </div>
+            <div className="content-stretch flex gap-4 items-center justify-start" data-name="Case Studies">
+              <div className="content-stretch flex gap-1 items-center justify-start" data-name="Case Studies">
+                <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[20px] text-black">
+                  <p className="leading-[32px]">Case Studies</p>
+                </div>
+              </div>
+              <div className="content-stretch flex gap-3 items-center justify-start">
+                <div className="content-stretch flex gap-4 items-center justify-start" data-name="DB">
+                  <button 
+                    onClick={onNavigateToDB}
+                    className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] hover:text-black transition-colors cursor-pointer"
+                  >
+                    <p className="leading-[32px]">Deutsche Bahn</p>
+                  </button>
+                </div>
+                <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] text-center">
+                  <p className="leading-[32px]">•</p>
+                </div>
+                <div className="content-stretch flex gap-4 items-center justify-start" data-name="Lumio">
+                  <button 
+                    onClick={onNavigateToLumio}
+                    className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] hover:text-black transition-colors cursor-pointer"
+                  >
+                    <p className="leading-[32px]">Lumio</p>
+                  </button>
+                </div>
+                <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] text-center">
+                  <p className="leading-[32px]">•</p>
+                </div>
+                <div className="content-stretch flex gap-4 items-center justify-start" data-name="Rizing">
+                  <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#000000] text-[20px] font-medium">
+                    <p className="leading-[32px]">Rizing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </footer>
       </main>
     </div>

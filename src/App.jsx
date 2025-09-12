@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import LandingPage from './components/LandingPage.jsx'
 import LumioCaseStudy from './components/LumioCaseStudy.jsx'
 import RizingCaseStudy from './components/RizingCaseStudy.jsx'
@@ -11,14 +11,37 @@ function App() {
     setCurrentView(view)
   }
 
+  // Scroll to top whenever the view changes
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [currentView])
+
   const renderCurrentView = () => {
     switch (currentView) {
       case 'lumio':
-        return <LumioCaseStudy onBackToHome={() => handleViewChange('home')} />
+        return (
+          <LumioCaseStudy 
+            onBackToHome={() => handleViewChange('home')} 
+            onNavigateToRizing={() => handleViewChange('rizing')}
+            onNavigateToDB={() => handleViewChange('db')}
+          />
+        )
       case 'rizing':
-        return <RizingCaseStudy onBackToHome={() => handleViewChange('home')} />
+        return (
+          <RizingCaseStudy 
+            onBackToHome={() => handleViewChange('home')} 
+            onNavigateToLumio={() => handleViewChange('lumio')}
+            onNavigateToDB={() => handleViewChange('db')}
+          />
+        )
       case 'db':
-        return <DBCaseStudy onBackToHome={() => handleViewChange('home')} />
+        return (
+          <DBCaseStudy 
+            onBackToHome={() => handleViewChange('home')} 
+            onNavigateToLumio={() => handleViewChange('lumio')}
+            onNavigateToRizing={() => handleViewChange('rizing')}
+          />
+        )
       case 'home':
       default:
         return (

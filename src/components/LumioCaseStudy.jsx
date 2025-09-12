@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import lumioHero from '../../images/Lumio/lumio_hero.png';
 import lumioBrandIdentity from '../../images/Lumio/lumio_brand_identity.png';
 import lumioFoundation from '../../images/Lumio/lumio_foundation.png';
@@ -6,9 +7,12 @@ import lumioMarketAnalysis from '../../images/Lumio/lumio_market_analysis.png';
 import lumioOutcome from '../../images/Lumio/lumio_outcome.png';
 import lumioUserNeeds from '../../images/Lumio/lumio_user_needs.png';
 import lumioWireframe from '../../images/Lumio/lumio_wireframe.png';
+import gradientVector from '../../images/Lumio/gradient_vector.png';
 import figmaLogo from '../../images/figma_logo.svg';
 
-function NavBar({ onBackToHome }) {
+function NavBar({ onBackToHome, onNavigateToRizing, onNavigateToDB }) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   return (
     <div
       className="box-border content-stretch flex flex-row items-start justify-between px-14 py-8 relative size-full"
@@ -17,24 +21,50 @@ function NavBar({ onBackToHome }) {
       <div
         className="box-border content-stretch flex flex-row font-['Helvetica_Neue:Medium',_sans-serif] gap-4 items-center justify-start leading-[0] not-italic p-0 relative shrink-0 text-[20px] text-left"
       >
-        <div className="relative shrink-0 text-[#8a8a8a] w-[157px]">
+        <button 
+          onClick={onBackToHome}
+          className="relative shrink-0 text-[#8a8a8a] w-[157px] hover:text-[#1A1A25] transition-colors cursor-pointer"
+        >
           <p className="block leading-[32px]">Sonja Weissberg</p>
-        </div>
+        </button>
         <div className="relative shrink-0 text-[#000000] w-[164px]">
           <p className="block leading-[32px]">Product Designer</p>
         </div>
       </div>
-      <div
-        className="bg-[#e9e9e9] box-border content-stretch flex flex-row gap-px h-11 items-center justify-center p-0 relative rounded-[13px] shrink-0 w-[181px]"
-      >
-        <div className="font-['Helvetica_Neue:Medium',_sans-serif] h-8 leading-[0] not-italic relative shrink-0 text-[#8e8e8e] text-[18px] text-left w-28">
-          <p className="block leading-[32px]">Case Studies</p>
-        </div>
-        <div className="relative shrink-0 size-8">
-          <svg className="block max-w-none size-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 9L12 15L18 9" stroke="#8e8e8e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </div>
+      <div className="relative">
+        <button
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          className="bg-[#e9e9e9] box-border content-stretch flex flex-row gap-px h-11 items-center justify-center p-0 relative rounded-[13px] shrink-0 w-[181px] hover:bg-[#ddd] transition-colors"
+        >
+          <div className="font-['Helvetica_Neue:Medium',_sans-serif] h-8 leading-[0] not-italic relative shrink-0 text-[#8e8e8e] text-[18px] text-left w-28">
+            <p className="block leading-[32px]">Case Studies</p>
+          </div>
+          <div className={`relative shrink-0 size-8 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}>
+            <svg className="block max-w-none size-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="#8e8e8e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
+        </button>
+        
+        {isDropdownOpen && (
+          <div className="absolute top-full right-0 mt-2 w-[181px] bg-white rounded-xl shadow-[3px_3px_40px_15px_rgba(0,0,0,0.15)] border border-gray-100 py-2 z-50">
+            <button
+              onClick={onNavigateToDB}
+              className="w-full text-left font-['Helvetica_Neue:Regular',_sans-serif] text-[#8a8a8a] text-[16px] px-4 py-2 hover:bg-gray-50 hover:text-black transition-colors"
+            >
+              Deutsche Bahn
+            </button>
+            <div className="font-['Helvetica_Neue:Regular',_sans-serif] text-[#000000] text-[16px] font-medium px-4 py-2 bg-gray-50">
+              Lumio
+            </div>
+            <button
+              onClick={onNavigateToRizing}
+              className="w-full text-left font-['Helvetica_Neue:Regular',_sans-serif] text-[#8a8a8a] text-[16px] px-4 py-2 hover:bg-gray-50 hover:text-black transition-colors"
+            >
+              Rizing
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -74,10 +104,10 @@ function ImageSection({ src, alt, className = "" }) {
 
 
 
-export default function LumioCaseStudy({ onBackToHome }) {
+export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNavigateToDB }) {
   return (
     <div className="min-h-screen w-full bg-white">
-      <NavBar onBackToHome={onBackToHome} />
+      <NavBar onBackToHome={onBackToHome} onNavigateToRizing={onNavigateToRizing} onNavigateToDB={onNavigateToDB} />
 
       <main className="pb-16">
         {/* Hero Section - Exact Figma Design */}
@@ -85,13 +115,9 @@ export default function LumioCaseStudy({ onBackToHome }) {
           <div className="relative w-full max-w-[1280px] mx-auto h-[1100px]">
             <div className="absolute h-[1136px] left-1/2 top-[-95px] w-[1280px] transform -translate-x-1/2">
               <div 
-                className="w-full h-full"
+                className="w-full h-full bg-center bg-cover bg-no-repeat"
                 style={{
-                  background: `linear-gradient(180deg, 
-                    rgba(248, 248, 248, 1) 0%, 
-                    rgba(252, 252, 252, 1) 25%, 
-                    rgba(255, 255, 255, 1) 50%, 
-                    rgba(255, 255, 255, 1) 100%)`
+                  backgroundImage: `url('${gradientVector}')`
                 }}
               ></div>
             </div>
@@ -99,27 +125,7 @@ export default function LumioCaseStudy({ onBackToHome }) {
               className="absolute h-[589.24px] left-1/2 overflow-clip top-[312px] w-[1009px] transform -translate-x-1/2"
               data-name="Macbook Pro 16"
             >
-              <div
-                className="absolute bg-no-repeat bg-size-[100%_100%] bg-top-left bottom-[0.58%] left-[0.94%] right-[0.92%] top-0"
-                data-name="MacBook Pro 16"
-                style={{ 
-                  backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" fill="%23333"><rect width="1000" height="600" rx="20" fill="%23333"/></svg>')` 
-                }}
-              />
-              <div
-                className="absolute bg-no-repeat bg-size-[100%_100%] bg-top-left inset-[1.67%_49.43%_97.53%_50.1%]"
-                data-name="Camera"
-                style={{ 
-                  backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="%23666"><circle cx="5" cy="5" r="3" fill="%23666"/></svg>')` 
-                }}
-              />
-              <div
-                className="absolute bg-no-repeat bg-size-[100%_100%] bg-top-left inset-[91.73%_46.91%_7%_47.58%]"
-                data-name="Logo"
-                style={{ 
-                  backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%23999"><rect width="20" height="20" rx="2" fill="%23999"/></svg>')` 
-                }}
-              />
+              
               <div
                 className="absolute bg-center bg-cover bg-no-repeat inset-[3.01%_9.22%_10.53%_9.86%] rounded-[15px]"
                 data-name="Screen mockup (REPLACE FILL)"
@@ -346,7 +352,7 @@ export default function LumioCaseStudy({ onBackToHome }) {
           </div>
         </section>
 
-        {/* Next Project CTA */}
+        {/* Back to Projects CTA */}
         <section className="max-w-md mx-auto py-16 sm:py-20 lg:py-24 text-center">
           <button 
             onClick={onBackToHome}
@@ -356,6 +362,53 @@ export default function LumioCaseStudy({ onBackToHome }) {
           </button>
           <p className="mt-6 text-[20px] text-[#1A1A25]">Back to all projects</p>
         </section>
+
+        {/* Footer */}
+        <footer className="bg-white w-full py-8" data-name="Footer">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-8">
+            <div className="content-stretch flex gap-4 items-center justify-start" data-name="Copyright">
+              <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px]">
+                <p className="leading-[32px]">© 2025 Sonja Weissberg. All Rights Reserved</p>
+              </div>
+            </div>
+            <div className="content-stretch flex gap-4 items-center justify-start" data-name="Case Studies">
+              <div className="content-stretch flex gap-1 items-center justify-start" data-name="Case Studies">
+                <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[20px] text-black">
+                  <p className="leading-[32px]">Case Studies</p>
+                </div>
+              </div>
+              <div className="content-stretch flex gap-3 items-center justify-start">
+                <div className="content-stretch flex gap-4 items-center justify-start" data-name="DB">
+                  <button 
+                    onClick={onNavigateToDB}
+                    className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] hover:text-black transition-colors cursor-pointer"
+                  >
+                    <p className="leading-[32px]">Deutsche Bahn</p>
+                  </button>
+                </div>
+                <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] text-center">
+                  <p className="leading-[32px]">•</p>
+                </div>
+                <div className="content-stretch flex gap-4 items-center justify-start" data-name="Lumio">
+                  <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#000000] text-[20px] font-medium">
+                    <p className="leading-[32px]">Lumio</p>
+                  </div>
+                </div>
+                <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] text-center">
+                  <p className="leading-[32px]">•</p>
+                </div>
+                <div className="content-stretch flex gap-4 items-center justify-start" data-name="Rizing">
+                  <button 
+                    onClick={onNavigateToRizing}
+                    className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] hover:text-black transition-colors cursor-pointer"
+                  >
+                    <p className="leading-[32px]">Rizing</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </main>
     </div>
   );
