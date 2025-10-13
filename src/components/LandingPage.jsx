@@ -30,7 +30,7 @@ function NavBar({ onNavigateToLumio, onNavigateToRizing, onNavigateToDB }) {
           <div className="font-['Helvetica_Neue:Medium',_sans-serif] h-8 leading-[0] not-italic relative shrink-0 text-[#8e8e8e] text-[16px] sm:text-[18px] text-left flex-1 text-center">
             <p className="block leading-[32px]">Case Studies</p>
           </div>
-          <div className={`relative shrink-0 m-2 size-6 sm:size-8 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}>
+          <div className={`relative shrink-0 mr-2 mt-1 size-6 sm:mt-0 sm:size-8 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}>
             <svg className="block max-w-none size-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 9L12 15L18 9" stroke="#8e8e8e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
