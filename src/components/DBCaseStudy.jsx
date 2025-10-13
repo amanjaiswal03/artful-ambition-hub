@@ -199,44 +199,46 @@ export default function DBCaseStudy({ onBackToHome, onNavigateToLumio, onNavigat
           <div className="bg-[#d4dde2] h-[760px] w-full overflow-hidden relative rounded-lg">
             <ImageSection src={dbMidFidelity} alt="DB mid fidelity screens" className="absolute inset-0 w-full h-full" />
           </div>
-          <div className="mt-8">
-            <div className="flex flex-col lg:flex-row gap-[66px] items-start">
-              <div className="flex flex-col gap-6 w-full lg:w-[464px]">
-                <h3 className="text-[#000000] text-[24px] font-medium font-['Helvetica_Neue'] leading-[1.25]">
-                  Considerations after testing the flow
-                </h3>
-                <BodyText className="leading-[1.25]">
-                  After creating and testing the redesigned booking flow, several questions and usability considerations came up:
-                </BodyText>
-                <div className="flex flex-col gap-6 w-full max-w-[434px]">
-                  <div className="flex flex-row gap-3 items-start">
-                    <div className="text-[#000000] text-[24px] leading-[1.25] w-8 h-8 flex-shrink-0">
-                      ❌
+          <div className="mt-8 flex justify-center">
+            <div className="bg-white rounded-[25px] border border-[#BEBEBE] p-16 max-w-4xl w-full">
+              <div className="flex flex-col lg:flex-row gap-[66px] items-start">
+                <div className="flex flex-col justify-center gap-6 w-full lg:w-[464px]">
+                  <h3 className="text-[#000000] text-[24px] font-medium font-['Helvetica_Neue'] leading-[1.25]">
+                    Considerations after testing the flow
+                  </h3>
+                  <BodyText className="leading-[1.25]">
+                    After creating and testing the redesigned booking flow, several questions and usability considerations came up:
+                  </BodyText>
+                  <div className="flex flex-col gap-6 w-full max-w-[434px]">
+                    <div className="flex flex-row gap-3 items-start">
+                      <div className="text-[#000000] text-[24px] leading-[1.25] w-8 h-8 flex-shrink-0">
+                        ❌
+                      </div>
+                      <BodyText className="leading-[1.25] w-[382px]">
+                        Why keep an error state if I could just fix the issue for the user directly?
+                      </BodyText>
                     </div>
-                    <BodyText className="leading-[1.25] w-[382px]">
-                      Why keep an error state if I could just fix the issue for the user directly?
-                    </BodyText>
-                  </div>
-                  <div className="flex flex-row gap-3 items-start">
-                    <div className="text-[#000000] text-[24px] leading-[1.25] w-8 h-8 flex-shrink-0">
-                      ❌
+                    <div className="flex flex-row gap-3 items-start">
+                      <div className="text-[#000000] text-[24px] leading-[1.25] w-8 h-8 flex-shrink-0">
+                        ❌
+                      </div>
+                      <BodyText className="leading-[1.25] w-[382px]">
+                        Users might not understand the logic of removing tickets from their itinerary if they still appear visually below.
+                      </BodyText>
                     </div>
-                    <BodyText className="leading-[1.25] w-[382px]">
-                      Users might not understand the logic of removing tickets from their itinerary if they still appear visually below.
-                    </BodyText>
-                  </div>
-                  <div className="flex flex-row gap-3 items-start">
-                    <div className="text-[#000000] text-[24px] leading-[1.25] w-8 h-8 flex-shrink-0">
-                      ❌
+                    <div className="flex flex-row gap-3 items-start">
+                      <div className="text-[#000000] text-[24px] leading-[1.25] w-8 h-8 flex-shrink-0">
+                        ❌
+                      </div>
+                      <BodyText className="leading-[1.25] w-[382px]">
+                        Is the information on ticket pricing actually presented in a clear way from the start?
+                      </BodyText>
                     </div>
-                    <BodyText className="leading-[1.25] w-[382px]">
-                      Is the information on ticket pricing actually presented in a clear way from the start?
-                    </BodyText>
                   </div>
                 </div>
-              </div>
-              <div className="flex-1 max-w-[290px]">
-                <ImageSection src={dbMidFidelity2} alt="DB mid fidelity 2" />
+                <div className="flex-1 max-w-[290px]">
+                  <ImageSection src={dbMidFidelity2} alt="DB mid fidelity 2" />
+                </div>
               </div>
             </div>
           </div>
