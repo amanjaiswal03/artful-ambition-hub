@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import lumioHero from '../../images/Lumio/lumio_hero.png';
 import lumioBrandIdentity from '../../images/Lumio/lumio_brand_identity.png';
 import lumioFoundation from '../../images/Lumio/lumio_foundation.png';
@@ -9,66 +8,9 @@ import lumioUserNeeds from '../../images/Lumio/lumio_user_needs.png';
 import lumioWireframe from '../../images/Lumio/lumio_wireframe.png';
 import gradientVector from '../../images/Lumio/gradient_vector.png';
 import figmaLogo from '../../images/figma_logo.svg';
+import NavBar from './NavBar';
+import Footer from './Footer';
 
-function NavBar({ onBackToHome, onNavigateToRizing, onNavigateToDB }) {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  return (
-    <div
-      className="box-border content-stretch flex flex-row items-start justify-between px-14 py-8 relative size-full"
-      data-name="Navigation bar"
-    >
-      <div
-        className="box-border content-stretch flex flex-row font-['Helvetica_Neue:Medium',_sans-serif] gap-4 items-center justify-start leading-[0] not-italic p-0 relative shrink-0 text-[20px] text-left"
-      >
-        <button 
-          onClick={onBackToHome}
-          className="relative shrink-0 text-[#8a8a8a] w-[157px] hover:text-[#1A1A25] transition-colors cursor-pointer"
-        >
-          <p className="block leading-[32px]">Sonja Weissberg</p>
-        </button>
-        <div className="relative shrink-0 text-[#000000] w-[164px]">
-          <p className="block leading-[32px]">Product Designer</p>
-        </div>
-      </div>
-      <div className="relative">
-        <button
-          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          className="bg-[#e9e9e9] box-border content-stretch flex flex-row gap-px h-11 items-center justify-center p-0 relative rounded-[13px] shrink-0 w-[181px] hover:bg-[#ddd] transition-colors"
-        >
-          <div className="font-['Helvetica_Neue:Medium',_sans-serif] h-8 leading-[0] not-italic relative shrink-0 text-[#8e8e8e] text-[18px] text-left w-28">
-            <p className="block leading-[32px]">Case Studies</p>
-          </div>
-          <div className={`relative shrink-0 size-8 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}>
-            <svg className="block max-w-none size-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 9L12 15L18 9" stroke="#8e8e8e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
-        </button>
-        
-        {isDropdownOpen && (
-          <div className="absolute top-full right-0 mt-2 w-[181px] bg-white rounded-xl shadow-[3px_3px_40px_15px_rgba(0,0,0,0.15)] border border-gray-100 py-2 z-50">
-            <button
-              onClick={onNavigateToDB}
-              className="w-full text-left font-['Helvetica_Neue:Regular',_sans-serif] text-[#8a8a8a] text-[16px] px-4 py-2 hover:bg-gray-50 hover:text-black transition-colors"
-            >
-              Deutsche Bahn
-            </button>
-            <div className="font-['Helvetica_Neue:Regular',_sans-serif] text-[#000000] text-[16px] font-medium px-4 py-2 bg-gray-50">
-              Lumio
-            </div>
-            <button
-              onClick={onNavigateToRizing}
-              className="w-full text-left font-['Helvetica_Neue:Regular',_sans-serif] text-[#8a8a8a] text-[16px] px-4 py-2 hover:bg-gray-50 hover:text-black transition-colors"
-            >
-              Rizing
-            </button>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
 
 function SectionTitle({ children, className = "" }) {
   return (
@@ -107,14 +49,20 @@ function ImageSection({ src, alt, className = "" }) {
 export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNavigateToDB }) {
   return (
     <div className="min-h-screen w-full bg-white">
-      <NavBar onBackToHome={onBackToHome} onNavigateToRizing={onNavigateToRizing} onNavigateToDB={onNavigateToDB} />
+      <NavBar
+        onBackToHome={onBackToHome}
+        onNavigateToRizing={onNavigateToRizing}
+        onNavigateToDB={onNavigateToDB}
+        onNavigateToLumio={() => { }}
+        showBackButton={true}
+      />
 
       <main className="pb-16">
         {/* Hero Section - Exact Figma Design */}
         <div className="relative w-full overflow-hidden" data-name="Hero">
           <div className="relative w-full max-w-[1280px] mx-auto h-[1100px]">
             <div className="absolute h-[1136px] left-1/2 top-[-95px] w-[1280px] transform -translate-x-1/2">
-              <div 
+              <div
                 className="w-full h-full bg-center bg-cover bg-no-repeat"
                 style={{
                   backgroundImage: `url('${gradientVector}')`
@@ -125,7 +73,7 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
               className="absolute h-[589.24px] left-1/2 overflow-clip top-[312px] w-[1009px] transform -translate-x-1/2"
               data-name="Macbook Pro 16"
             >
-              
+
               <div
                 className="absolute bg-center bg-cover bg-no-repeat inset-[3.01%_9.22%_10.53%_9.86%] rounded-[15px]"
                 data-name="Screen mockup (REPLACE FILL)"
@@ -204,13 +152,13 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
         <section className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8" style={{ marginTop: '200px' }}>
           <SectionTitle className="mb-8">The Challenge</SectionTitle>
           <BodyText className="mb-8 text-[20px] leading-[32px]">
-            API onboarding processes were taking developers weeks to complete, with complex documentation 
-            and scattered resources creating friction in the developer experience. Our goal was to create 
+            API onboarding processes were taking developers weeks to complete, with complex documentation
+            and scattered resources creating friction in the developer experience. Our goal was to create
             an intuitive solution that could reduce onboarding time from weeks to hours.
           </BodyText>
-          
-          <ImageSection 
-            src={lumioFoundation} 
+
+          <ImageSection
+            src={lumioFoundation}
             alt="Lumio Foundation - Problem analysis and research"
             className="my-12"
           />
@@ -219,30 +167,30 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
         {/* User Research & Market Analysis */}
         <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <SectionTitle className="mb-8 text-center">Understanding Our Users</SectionTitle>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <SectionSubtitle className="mb-6">User Needs Analysis</SectionSubtitle>
               <BodyText className="mb-8">
-                Through extensive user interviews and surveys, we identified key pain points in the current 
-                API onboarding process. Developers needed immediate answers, contextual guidance, and 
+                Through extensive user interviews and surveys, we identified key pain points in the current
+                API onboarding process. Developers needed immediate answers, contextual guidance, and
                 hands-on examples to successfully integrate our APIs.
               </BodyText>
-              <ImageSection 
-                src={lumioUserNeeds} 
+              <ImageSection
+                src={lumioUserNeeds}
                 alt="User needs analysis and research findings"
               />
             </div>
-            
+
             <div>
               <SectionSubtitle className="mb-6">Market Analysis</SectionSubtitle>
               <BodyText className="mb-8">
-                Competitive analysis revealed that most API providers still relied on traditional documentation. 
-                This presented an opportunity to differentiate through an AI-powered, conversational approach 
+                Competitive analysis revealed that most API providers still relied on traditional documentation.
+                This presented an opportunity to differentiate through an AI-powered, conversational approach
                 to developer onboarding.
               </BodyText>
-              <ImageSection 
-                src={lumioMarketAnalysis} 
+              <ImageSection
+                src={lumioMarketAnalysis}
                 alt="Market analysis and competitive research"
               />
             </div>
@@ -253,13 +201,13 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
         <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <SectionTitle className="mb-8 text-center">Design Process</SectionTitle>
           <BodyText className="mb-12 text-center text-[20px] leading-[32px] max-w-3xl mx-auto">
-            Starting with low-fidelity wireframes, we iterated through multiple design concepts, 
-            focusing on creating an intuitive conversational interface that could handle complex 
+            Starting with low-fidelity wireframes, we iterated through multiple design concepts,
+            focusing on creating an intuitive conversational interface that could handle complex
             technical queries while maintaining simplicity.
           </BodyText>
-          
-          <ImageSection 
-            src={lumioWireframe} 
+
+          <ImageSection
+            src={lumioWireframe}
             alt="Lumio wireframes and design iterations"
             className="mb-16"
           />
@@ -269,12 +217,12 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
         <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <SectionTitle className="mb-8 text-center">Visual Identity</SectionTitle>
           <BodyText className="mb-12 text-center text-[20px] leading-[32px] max-w-3xl mx-auto">
-            The visual design needed to feel approachable yet professional, with a color palette and 
+            The visual design needed to feel approachable yet professional, with a color palette and
             typography that would appeal to developers while maintaining trust and credibility.
           </BodyText>
-          
-          <ImageSection 
-            src={lumioBrandIdentity} 
+
+          <ImageSection
+            src={lumioBrandIdentity}
             alt="Lumio brand identity and visual design system"
             className="mb-16"
           />
@@ -283,15 +231,15 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
         {/* Results & Impact */}
         <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <SectionTitle className="mb-8 text-center">Impact & Results</SectionTitle>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
-              <ImageSection 
-                src={lumioImpact} 
+              <ImageSection
+                src={lumioImpact}
                 alt="Lumio impact metrics and success indicators"
               />
             </div>
-            
+
             <div className="flex flex-col justify-center">
               <SectionSubtitle className="mb-6">Key Metrics</SectionSubtitle>
               <div className="space-y-6">
@@ -316,12 +264,12 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
         <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <SectionTitle className="mb-8 text-center">Final Outcome</SectionTitle>
           <BodyText className="mb-12 text-center text-[20px] leading-[32px] max-w-3xl mx-auto">
-            The final solution successfully transformed the API onboarding experience, creating a 
+            The final solution successfully transformed the API onboarding experience, creating a
             seamless bridge between complex technical documentation and user-friendly interaction.
           </BodyText>
-          
-          <ImageSection 
-            src={lumioOutcome} 
+
+          <ImageSection
+            src={lumioOutcome}
             alt="Lumio final outcome and solution overview"
             className="mb-16"
           />
@@ -336,7 +284,7 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
                 Conversational Design Principles
               </h4>
               <BodyText>
-                Designing for AI-powered conversations requires careful consideration of context, 
+                Designing for AI-powered conversations requires careful consideration of context,
                 error handling, and progressive disclosure to maintain user engagement.
               </BodyText>
             </div>
@@ -345,7 +293,7 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
                 Developer-Centric Approach
               </h4>
               <BodyText>
-                Understanding the developer mindset and workflow was crucial for creating a tool 
+                Understanding the developer mindset and workflow was crucial for creating a tool
                 that truly integrated into their existing processes.
               </BodyText>
             </div>
@@ -354,7 +302,7 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
 
         {/* Back to Projects CTA */}
         <section className="max-w-md mx-auto py-16 sm:py-20 lg:py-24 text-center">
-          <button 
+          <button
             onClick={onBackToHome}
             className="mx-auto size-[160px] sm:size-[200px] bg-[#fcf4e9] rounded-[60px] flex items-center justify-center hover:bg-[#f5e6d3] transition-colors cursor-pointer group"
           >
@@ -363,53 +311,9 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
           <p className="mt-6 text-[20px] text-[#1A1A25]">Back to all projects</p>
         </section>
 
-        {/* Footer */}
-        <footer className="bg-white w-full py-8" data-name="Footer">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-8">
-            <div className="content-stretch flex gap-4 items-center justify-start" data-name="Copyright">
-              <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px]">
-                <p className="leading-[32px]">© 2025 Sonja Weissberg. All Rights Reserved</p>
-              </div>
-            </div>
-            <div className="content-stretch flex gap-4 items-center justify-start" data-name="Case Studies">
-              <div className="content-stretch flex gap-1 items-center justify-start" data-name="Case Studies">
-                <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[20px] text-black">
-                  <p className="leading-[32px]">Case Studies</p>
-                </div>
-              </div>
-              <div className="content-stretch flex gap-3 items-center justify-start">
-                <div className="content-stretch flex gap-4 items-center justify-start" data-name="DB">
-                  <button 
-                    onClick={onNavigateToDB}
-                    className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] hover:text-black transition-colors cursor-pointer"
-                  >
-                    <p className="leading-[32px]">Deutsche Bahn</p>
-                  </button>
-                </div>
-                <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] text-center">
-                  <p className="leading-[32px]">•</p>
-                </div>
-                <div className="content-stretch flex gap-4 items-center justify-start" data-name="Lumio">
-                  <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#000000] text-[20px] font-medium">
-                    <p className="leading-[32px]">Lumio</p>
-                  </div>
-                </div>
-                <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] text-center">
-                  <p className="leading-[32px]">•</p>
-                </div>
-                <div className="content-stretch flex gap-4 items-center justify-start" data-name="Rizing">
-                  <button 
-                    onClick={onNavigateToRizing}
-                    className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] hover:text-black transition-colors cursor-pointer"
-                  >
-                    <p className="leading-[32px]">Rizing</p>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+
       </main>
+      <Footer onNavigateToLumio={() => { }} onNavigateToRizing={onNavigateToRizing} onNavigateToDB={onNavigateToDB} />
     </div>
   );
 }
