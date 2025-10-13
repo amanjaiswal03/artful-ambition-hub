@@ -253,8 +253,6 @@ export default function LandingPage({ onNavigateToLumio, onNavigateToRizing, onN
             <Chip><span>Dog Person</span><span>🐩</span></Chip>
             <Chip><span>Private Chef</span><span>🧄</span></Chip>
             <Chip><span>Pop-culture Nerd</span><span>🔥</span></Chip>
-          </div>
-          <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
             <Chip><span>Dry Humorist</span><span>🍸</span></Chip>
             <Chip><span>Master of Arts</span><span>🎓</span></Chip>
             <Chip><span>Detail Lover</span><span>🕸️</span></Chip>
