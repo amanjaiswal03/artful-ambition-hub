@@ -14,7 +14,7 @@ function ProjectCard({ title, description, imageSrc, rotateClass, imageScale = "
       className={`w-[280px] sm:w-[320px] md:w-[380px] lg:w-[450px] xl:w-[500px] h-[240px] sm:h-[280px] md:h-[340px] lg:h-[410px] xl:h-[460px] bg-white rounded-2xl shadow-[3px_3px_40px_15px_rgba(0,0,0,0.06)] p-3 sm:p-4 ${rotateClass} transition-all duration-500 ease-out hover:rotate-3 hover:-translate-y-1 hover:translate-x-1 hover:scale-105 sm:hover:scale-110 hover:shadow-[8px_8px_60px_25px_rgba(0,0,0,0.1)] cursor-pointer group`}
     >
       <div className="h-full rounded-xl overflow-hidden flex items-center justify-center">
-        <img src={imageSrc} alt={title} className={`max-w-full max-h-full object-contain ${imageScale} scale-[0.8] transition-all duration-500 ease-out group-hover:-rotate-2`} />
+        <img src={imageSrc} alt={title} className={`max-w-full max-h-full object-contain ${imageScale} scale-[0.8] transition-all duration-500 ease-out`} />
       </div>
     </div>
   );
