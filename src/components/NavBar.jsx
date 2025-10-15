@@ -26,7 +26,7 @@ export default function NavBar({ showBackButton = false }) {
 
     return (
         <div
-            className="box-border content-stretch flex flex-row items-center justify-between px-4 sm:px-8 lg:px-14 py-6 sm:py-8 relative w-full"
+            className="box-border content-stretch flex flex-row items-center justify-between bg-transparent px-4 sm:px-8 lg:px-14 py-6 sm:py-8 relative w-full"
             data-name="Navigation bar"
         >
             <div

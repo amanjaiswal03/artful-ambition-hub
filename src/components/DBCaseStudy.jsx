@@ -8,7 +8,7 @@ import dbSolution from '../../images/DB/db_solution.png';
 import dbMidFidelity from '../../images/DB/db_mid_fidelity_screens.png';
 import dbMidFidelity2 from '../../images/DB/db_mid_fidelity_2.png';
 import dbImpact from '../../images/DB/db_impact.png';
-import dbOutcome from '../../images/DB/db_outcome.png';
+import dbOutcome from '../../images/DB/db_outcome.jpg';
 import figmaLogo from '../../images/figma_logo.svg';
 import NavBar from './NavBar';
 import Footer from './Footer';

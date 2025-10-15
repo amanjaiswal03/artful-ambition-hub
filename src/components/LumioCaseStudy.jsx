@@ -86,7 +86,7 @@ export default function LumioCaseStudy() {
             {/* Title - Responsive - Above image on both mobile and desktop */}
             <div className="relative md:absolute w-full md:w-[880px] md:left-[200px] pt-8 md:pt-0 md:top-[103px] px-4 md:px-0 z-10">
               <p className="font-['Helvetica_Neue'] font-normal text-[28px] md:text-[48px] leading-[1.2] md:leading-[60px] text-black text-center">
-                Enabling Faster API Onboarding Through a Custom Chatbot Dashboard
+                Enabling faster API onboarding through a custom chatbot dashboard
               </p>
             </div>
 
@@ -127,16 +127,15 @@ export default function LumioCaseStudy() {
                   Tools
                 </p>
                 <div className="flex gap-[16px] items-center">
-                  <div className="bg-white rounded-[12px] shadow-[1.821px_1.821px_24.719px_9.105px_rgba(0,0,0,0.22)] w-[56px] h-[56px] flex items-center justify-center shrink-0">
-                    <div className="w-[40px] h-[40px] overflow-clip relative">
-                      <div className="absolute inset-[11.56%_24.38%_11.56%_24.37%]">
-                        <img alt="Figma" className="block w-full h-full" src={figmaLogo} />
+                  <div className="flex flex-row items-center gap-4">
+                    <div className="bg-[#ffffff] rounded-xl shadow-[1.821px_1.821px_24.719px_9.105px_rgba(0,0,0,0.22)] size-14 flex items-center justify-center">
+                      <div className="overflow-clip relative shrink-0 size-10">
+                        <img alt="Figma" className="block max-w-none size-full" src={figmaLogo} />
                       </div>
                     </div>
+                    <div className="font-['Helvetica_Neue:Regular',_sans-serif] text-[#000000] text-[18px]">Figma</div>
                   </div>
-                  <p className="font-['Helvetica_Neue'] font-normal text-[16px] md:text-[18px] leading-[1.25] text-black">
-                    Figma
-                  </p>
+
                 </div>
               </div>
             </div>
@@ -144,7 +143,7 @@ export default function LumioCaseStudy() {
         </div>
 
         {/* Problem Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-12 md:py-[162px]">
+        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-12">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Problem</SectionTitle>
             <div className="flex flex-col md:flex-row gap-[24px] items-start w-full md:w-[1022px]">
@@ -219,7 +218,7 @@ export default function LumioCaseStudy() {
           <div className="mb-[32px] w-full md:w-[404px]">
             <SectionSubtitle className="mb-[24px]">Laying the foundation for the MVP</SectionSubtitle>
             <BodyText>
-              By mapping out pain points and user needs, I narrowed down to focusing on simplification, analytics and real-time assistance for the MVP.
+              By mapping out pain points and user needs,<br /> I narrowed down to focusing on simplification, analytics and real-time assistance for the MVP.
             </BodyText>
           </div>
           <ImageSection
@@ -230,10 +229,10 @@ export default function LumioCaseStudy() {
 
         {/* Market Analysis Section */}
         <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-12 md:py-[64px]">
-          <div className="mb-[32px] w-full md:w-[382px]">
+          <div className="mb-[32px] w-full md:w-[388px]">
             <SectionSubtitle className="mb-[24px]">How Lumio stands out</SectionSubtitle>
             <BodyText>
-              To identify Lumio's strengths and opportunities, I conducted a competitive analysis to explore how other tools handle API adoption. The result: Lumio stands out by combining real-time AI assistance with an analytics tool that enables data-driven decisions.
+              To identify Lumio's strengths and opportunities, I conducted a competitive analysis to explore how other tools handle API adoption.<br /> The result: Lumio stands out by combining <br /> real-time AI assistance with an analytics tool that enables data-driven decisions.
             </BodyText>
           </div>
           <ImageSection
