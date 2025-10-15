@@ -35,8 +35,8 @@ function ProjectText({ title, description, maxWidth = "max-w-[280px]" }) {
 
   return (
     <div className={`text-center ${maxWidth} px-4`}>
-      <p className="text-[#1A1A25] text-lg sm:text-xl leading-7 sm:leading-8">{title}</p>
-      <p className="text-[#8a8a8a] text-sm sm:text-base leading-6 sm:leading-[30px]">
+      <p className="text-[#1A1A25] text-lg sm:text-xl leading-8 sm:leading-9 mb-2">{title}</p>
+      <p className="text-[#8a8a8a] text-sm sm:text-base leading-6 sm:leading-6">
         {renderDescription()}
       </p>
     </div>
