@@ -183,7 +183,7 @@ export default function DBCaseStudy() {
               A more user-centered booking experience of managing travel add-ons like bikes and pets.
             </BodyText>
           </div>
-          <div className="bg-[#d4dde2] h-auto min-h-[400px] sm:min-h-[600px] w-full overflow-hidden relative rounded-[25px] mb-6 sm:mb-8">
+          <div className="bg-[#d4dde2] h-auto w-full overflow-hidden relative rounded-[25px] mb-6 sm:mb-8">
             <ImageSection src={dbMidFidelity} alt="DB mid fidelity screens" className="w-full h-auto" />
           </div>
           <div className="flex justify-center">
