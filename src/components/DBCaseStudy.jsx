@@ -1,4 +1,5 @@
 import dbHero from '../../images/DB/db_hero.png';
+import dbLogo from '../../images/DB/db_logo.png';
 import dbProblem from '../../images/DB/db_problem.png';
 import dbPainPoints from '../../images/DB/db_pain_points.png';
 import dbProblemStatementDecorative from '../../images/DB/db_problem_statement_decorative.png';
@@ -32,31 +33,7 @@ function ImageSection({ src, alt, className = "" }) {
   );
 }
 
-function FooterBar() {
-  return (
-    <div className="bg-[#ffffff] box-border content-stretch flex flex-row gap-[292px] h-24 items-center justify-start px-14 py-0 w-full">
-      <div className="box-border content-stretch flex flex-row gap-4 items-center justify-start p-0">
-        <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px] text-left">
-          <p className="block leading-[32px]">© 2025 Sonja Weissberg. All Rights Reserved</p>
-        </div>
-      </div>
-      <div className="box-border content-stretch flex flex-row gap-4 items-center justify-start p-0">
-        <div className="box-border content-stretch flex flex-row gap-1 items-center justify-start p-0">
-          <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#000000] text-[20px] text-left">
-            <p className="block leading-[32px]">Case Studies</p>
-          </div>
-        </div>
-        <div className="box-border content-stretch flex flex-row gap-3 items-center justify-start p-0">
-          <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px]">Lumio</div>
-          <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px]">•</div>
-          <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px]">Rizing</div>
-          <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px]">•</div>
-          <div className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[20px]">Deutsche Bahn</div>
-        </div>
-      </div>
-    </div>
-  );
-}
+
 
 export default function DBCaseStudy({ onBackToHome, onNavigateToLumio, onNavigateToRizing }) {
   return (
@@ -74,7 +51,11 @@ export default function DBCaseStudy({ onBackToHome, onNavigateToLumio, onNavigat
           <div className="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-0">
             <div className="text-center pt-8 sm:pt-12 lg:pt-[103px] px-4">
               <h1 className="font-['Helvetica_Neue:Regular',_sans-serif] leading-tight sm:leading-[60px] text-[#000000] text-[28px] sm:text-[36px] lg:text-[48px] max-w-[880px] mx-auto">
-                Designing a Unified Multi-Item Booking Flow for Deutsche Bahn
+                <span>Designing a Unified Multi-Item Booking Flow for </span>
+                <span className="inline-flex items-center gap-2 align-middle">
+                  <span>Deutsche Bahn</span>
+                  <img src={dbLogo} alt="DB" className="h-6 sm:h-8 lg:h-10 w-auto" />
+                </span>
               </h1>
             </div>
             <div className="mt-8 sm:mt-12 lg:mt-[136px] px-4 max-w-[860px] mx-auto">
@@ -125,7 +106,7 @@ export default function DBCaseStudy({ onBackToHome, onNavigateToLumio, onNavigat
               </div>
             </div>
             <div className="w-full lg:w-[497px]">
-              <div className="bg-black rounded-3xl px-5 sm:px-6 py-4 min-h-[300px] sm:min-h-[350px] lg:h-[382px] flex flex-col gap-4 sm:gap-6">
+              <div className="bg-black rounded-3xl px-5 sm:px-6 py-4 min-h-[300px] sm:min-h-[350px] lg:h-full flex flex-col gap-4 sm:gap-6">
                 <div className="flex items-start justify-between">
                   <p className="text-[#bebebe] text-[18px] sm:text-[20px] font-medium font-['Helvetica_Neue'] leading-[1.25]">Problem Statement</p>
                   <div className="w-[50px] sm:w-[60px] h-[38px] sm:h-[45.68px] flex-shrink-0">
