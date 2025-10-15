@@ -1,62 +1,34 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import LandingPage from './components/LandingPage.jsx'
 import LumioCaseStudy from './components/LumioCaseStudy.jsx'
 import RizingCaseStudy from './components/RizingCaseStudy.jsx'
 import DBCaseStudy from './components/DBCaseStudy.jsx'
 
-function App() {
-  const [currentView, setCurrentView] = useState('home')
+function ScrollToTop() {
+  const { pathname } = useLocation()
 
-  const handleViewChange = (view) => {
-    setCurrentView(view)
-  }
-
-  // Scroll to top whenever the view changes
   useEffect(() => {
+    // Scroll window to top
     window.scrollTo(0, 0)
-  }, [currentView])
+    // Also scroll document body and html to top
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+  }, [pathname])
 
-  const renderCurrentView = () => {
-    switch (currentView) {
-      case 'lumio':
-        return (
-          <LumioCaseStudy 
-            onBackToHome={() => handleViewChange('home')} 
-            onNavigateToRizing={() => handleViewChange('rizing')}
-            onNavigateToDB={() => handleViewChange('db')}
-          />
-        )
-      case 'rizing':
-        return (
-          <RizingCaseStudy 
-            onBackToHome={() => handleViewChange('home')} 
-            onNavigateToLumio={() => handleViewChange('lumio')}
-            onNavigateToDB={() => handleViewChange('db')}
-          />
-        )
-      case 'db':
-        return (
-          <DBCaseStudy 
-            onBackToHome={() => handleViewChange('home')} 
-            onNavigateToLumio={() => handleViewChange('lumio')}
-            onNavigateToRizing={() => handleViewChange('rizing')}
-          />
-        )
-      case 'home':
-      default:
-        return (
-          <LandingPage
-            onNavigateToLumio={() => handleViewChange('lumio')}
-            onNavigateToRizing={() => handleViewChange('rizing')}
-            onNavigateToDB={() => handleViewChange('db')}
-          />
-        )
-    }
-  }
+  return null
+}
 
+function App() {
   return (
-    <div className="w-screen h-screen">
-      {renderCurrentView()}
+    <div className="w-full min-h-screen">
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/lumio" element={<LumioCaseStudy />} />
+        <Route path="/rizing" element={<RizingCaseStudy />} />
+        <Route path="/db" element={<DBCaseStudy />} />
+      </Routes>
     </div>
   )
 }

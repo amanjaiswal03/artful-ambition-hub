@@ -1,4 +1,9 @@
-export default function Footer({ onNavigateToLumio, onNavigateToRizing, onNavigateToDB }) {
+import { useNavigate, useLocation } from 'react-router-dom';
+
+export default function Footer() {
+    const navigate = useNavigate();
+    const location = useLocation();
+
     return (
         <footer className="bg-white w-full py-8" data-name="Footer">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center sm:justify-between gap-6 sm:gap-8">
@@ -17,8 +22,9 @@ export default function Footer({ onNavigateToLumio, onNavigateToRizing, onNaviga
                         <div className="content-stretch flex flex-wrap gap-2 sm:gap-3 items-center justify-center">
                             <div className="content-stretch flex gap-2 sm:gap-4 items-center justify-center" data-name="DB">
                                 <button
-                                    onClick={onNavigateToDB}
-                                    className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[14px] sm:text-[16px] lg:text-[20px] hover:text-black transition-colors cursor-pointer"
+                                    onClick={() => navigate('/db')}
+                                    className={`font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[14px] sm:text-[16px] lg:text-[20px] hover:text-black transition-colors cursor-pointer ${location.pathname === '/db' ? 'text-black font-medium' : 'text-[#8a8a8a]'
+                                        }`}
                                 >
                                     <p className="leading-[24px] sm:leading-[32px] whitespace-nowrap">Deutsche Bahn</p>
                                 </button>
@@ -28,8 +34,9 @@ export default function Footer({ onNavigateToLumio, onNavigateToRizing, onNaviga
                             </div>
                             <div className="content-stretch flex gap-2 sm:gap-4 items-center justify-center" data-name="Lumio">
                                 <button
-                                    onClick={onNavigateToLumio}
-                                    className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[14px] sm:text-[16px] lg:text-[20px] hover:text-black transition-colors cursor-pointer"
+                                    onClick={() => navigate('/lumio')}
+                                    className={`font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[14px] sm:text-[16px] lg:text-[20px] hover:text-black transition-colors cursor-pointer ${location.pathname === '/lumio' ? 'text-black font-medium' : 'text-[#8a8a8a]'
+                                        }`}
                                 >
                                     <p className="leading-[24px] sm:leading-[32px]">Lumio</p>
                                 </button>
@@ -39,8 +46,9 @@ export default function Footer({ onNavigateToLumio, onNavigateToRizing, onNaviga
                             </div>
                             <div className="content-stretch flex gap-2 sm:gap-4 items-center justify-center" data-name="Rizing">
                                 <button
-                                    onClick={onNavigateToRizing}
-                                    className="font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[#8a8a8a] text-[14px] sm:text-[16px] lg:text-[20px] hover:text-black transition-colors cursor-pointer"
+                                    onClick={() => navigate('/rizing')}
+                                    className={`font-['Helvetica_Neue:Regular',_sans-serif] leading-[0] not-italic text-[14px] sm:text-[16px] lg:text-[20px] hover:text-black transition-colors cursor-pointer ${location.pathname === '/rizing' ? 'text-black font-medium' : 'text-[#8a8a8a]'
+                                        }`}
                                 >
                                     <p className="leading-[24px] sm:leading-[32px]">Rizing</p>
                                 </button>

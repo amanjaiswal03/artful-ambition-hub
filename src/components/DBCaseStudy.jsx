@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import dbHero from '../../images/DB/db_hero.png';
 import dbLogo from '../../images/DB/db_logo.png';
 import dbProblem from '../../images/DB/db_problem.png';
@@ -35,16 +36,12 @@ function ImageSection({ src, alt, className = "" }) {
 
 
 
-export default function DBCaseStudy({ onBackToHome, onNavigateToLumio, onNavigateToRizing }) {
+export default function DBCaseStudy() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen w-full bg-white">
-      <NavBar
-        onBackToHome={onBackToHome}
-        onNavigateToLumio={onNavigateToLumio}
-        onNavigateToRizing={onNavigateToRizing}
-        onNavigateToDB={() => { }}
-        showBackButton={true}
-      />
+      <NavBar showBackButton={true} />
       <main className="pb-16">
         {/* Hero */}
         <div className="relative w-full overflow-hidden">
@@ -270,7 +267,7 @@ export default function DBCaseStudy({ onBackToHome, onNavigateToLumio, onNavigat
         {/* Back to Projects CTA */}
         <section className="max-w-md mx-auto py-16 sm:py-20 lg:py-24 text-center">
           <button
-            onClick={onBackToHome}
+            onClick={() => navigate('/')}
             className="mx-auto size-[160px] sm:size-[200px] bg-[#fcf4e9] rounded-[60px] flex items-center justify-center hover:bg-[#f5e6d3] transition-colors cursor-pointer group"
           >
             <span className="text-[96px] group-hover:scale-110 transition-transform">👈</span>
@@ -280,7 +277,7 @@ export default function DBCaseStudy({ onBackToHome, onNavigateToLumio, onNavigat
 
 
       </main>
-      <Footer onNavigateToLumio={onNavigateToLumio} onNavigateToRizing={onNavigateToRizing} onNavigateToDB={() => { }} />
+      <Footer />
     </div>
   );
 }

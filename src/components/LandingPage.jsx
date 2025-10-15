@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import lumioImage from '../../images/lumio.png';
 import rizingImage from '../../images/rizing.png';
 import deutschlandImage from '../../images/DB.png';
@@ -50,10 +51,12 @@ function Chip({ children }) {
   );
 }
 
-export default function LandingPage({ onNavigateToLumio, onNavigateToRizing, onNavigateToDB }) {
+export default function LandingPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen w-full bg-white">
-      <NavBar onNavigateToLumio={onNavigateToLumio} onNavigateToRizing={onNavigateToRizing} onNavigateToDB={onNavigateToDB} />
+      <NavBar />
 
       <main className="pb-16">
         {/* Hero */}
@@ -81,7 +84,7 @@ export default function LandingPage({ onNavigateToLumio, onNavigateToRizing, onN
                 imageSrc={deutschlandImage}
                 rotateClass="-rotate-[3deg]"
                 imageScale="scale-[1.02]"
-                onClick={onNavigateToDB}
+                onClick={() => navigate('/db')}
               />
               <div className="mt-8">
                 <ProjectText
@@ -97,7 +100,7 @@ export default function LandingPage({ onNavigateToLumio, onNavigateToRizing, onN
                 imageSrc={lumioImage}
                 rotateClass="rotate-[4deg]"
                 imageScale="scale-[1.02]"
-                onClick={onNavigateToLumio}
+                onClick={() => navigate('/lumio')}
               />
               <div className="mt-8">
                 <ProjectText
@@ -113,7 +116,7 @@ export default function LandingPage({ onNavigateToLumio, onNavigateToRizing, onN
               <ProjectCard
                 imageSrc={rizingImage}
                 rotateClass="-rotate-[5deg]"
-                onClick={onNavigateToRizing}
+                onClick={() => navigate('/rizing')}
               />
               <div className="mt-8">
                 <ProjectText
@@ -133,7 +136,7 @@ export default function LandingPage({ onNavigateToLumio, onNavigateToRizing, onN
                   imageSrc={deutschlandImage}
                   rotateClass="-rotate-[3deg]"
                   imageScale="scale-[1.02]"
-                  onClick={onNavigateToDB}
+                  onClick={() => navigate('/db')}
                 />
                 <div className="mt-12">
                   <ProjectText
@@ -151,7 +154,7 @@ export default function LandingPage({ onNavigateToLumio, onNavigateToRizing, onN
                   imageSrc={lumioImage}
                   rotateClass="rotate-[4deg]"
                   imageScale="scale-[1.02]"
-                  onClick={onNavigateToLumio}
+                  onClick={() => navigate('/lumio')}
                 />
                 <div className="mt-20">
                   <ProjectText
@@ -169,7 +172,7 @@ export default function LandingPage({ onNavigateToLumio, onNavigateToRizing, onN
                 <ProjectCard
                   imageSrc={rizingImage}
                   rotateClass="-rotate-[5deg]"
-                  onClick={onNavigateToRizing}
+                  onClick={() => navigate('/rizing')}
                 />
                 <div className="mt-12">
                   <ProjectText
@@ -212,7 +215,7 @@ export default function LandingPage({ onNavigateToLumio, onNavigateToRizing, onN
           <p className="mt-4 sm:mt-6 text-[18px] sm:text-[20px] text-[#1A1A25]">Send me a note</p>
         </section>
 
-        <Footer onNavigateToLumio={onNavigateToLumio} onNavigateToRizing={onNavigateToRizing} onNavigateToDB={onNavigateToDB} />
+        <Footer />
       </main>
     </div>
   );

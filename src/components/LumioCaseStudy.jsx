@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import lumioHero from '../../images/Lumio/lumio_hero.png';
 import lumioBrandIdentity from '../../images/Lumio/lumio_brand_identity.png';
 import lumioFoundation from '../../images/Lumio/lumio_foundation.png';
@@ -62,16 +63,12 @@ function ImageSection({ src, alt, className = "" }) {
 
 
 
-export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNavigateToDB }) {
+export default function LumioCaseStudy() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen w-full bg-white">
-      <NavBar
-        onBackToHome={onBackToHome}
-        onNavigateToRizing={onNavigateToRizing}
-        onNavigateToDB={onNavigateToDB}
-        onNavigateToLumio={() => { }}
-        showBackButton={true}
-      />
+      <NavBar showBackButton={true} />
 
       <main className="pb-8 md:pb-16">
         {/* Hero Section - Responsive Design */}
@@ -299,7 +296,7 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
         {/* Back to Projects CTA */}
         <section className="max-w-md mx-auto py-16 sm:py-20 lg:py-24 text-center">
           <button
-            onClick={onBackToHome}
+            onClick={() => navigate('/')}
             className="mx-auto size-[160px] sm:size-[200px] bg-[#fcf4e9] rounded-[60px] flex items-center justify-center hover:bg-[#f5e6d3] transition-colors cursor-pointer group"
           >
             <span className="text-[96px] group-hover:scale-110 transition-transform">👈</span>
@@ -309,7 +306,7 @@ export default function LumioCaseStudy({ onBackToHome, onNavigateToRizing, onNav
 
 
       </main>
-      <Footer onNavigateToLumio={() => { }} onNavigateToRizing={onNavigateToRizing} onNavigateToDB={onNavigateToDB} />
+      <Footer />
     </div>
   );
 }

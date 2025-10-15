@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import rizingHero from '../../images/Rizing/rizing_hero.png';
 import rizingBrandIdentity from '../../images/Rizing/rizing_brand_identity.png';
 import rizingLogoDevelopment from '../../images/Rizing/rizing_logo_development.png';
@@ -44,16 +45,12 @@ function ImageSection({ src, alt, className = "" }) {
 
 
 
-export default function RizingCaseStudy({ onBackToHome, onNavigateToLumio, onNavigateToDB }) {
+export default function RizingCaseStudy() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen w-full bg-white">
-      <NavBar
-        onBackToHome={onBackToHome}
-        onNavigateToLumio={onNavigateToLumio}
-        onNavigateToDB={onNavigateToDB}
-        onNavigateToRizing={() => { }}
-        showBackButton={true}
-      />
+      <NavBar showBackButton={true} />
 
       <main className="pb-16">
         {/* Hero Section */}
@@ -212,7 +209,7 @@ export default function RizingCaseStudy({ onBackToHome, onNavigateToLumio, onNav
         {/* Back to Projects CTA */}
         <section className="max-w-md mx-auto py-12 sm:py-16 lg:py-24 text-center px-4">
           <button
-            onClick={onBackToHome}
+            onClick={() => navigate('/')}
             className="mx-auto size-[120px] sm:size-[160px] lg:size-[200px] bg-[#fcf4e9] rounded-[40px] sm:rounded-[50px] lg:rounded-[60px] flex items-center justify-center hover:bg-[#f5e6d3] transition-colors cursor-pointer group"
           >
             <span className="text-[64px] sm:text-[80px] lg:text-[96px] group-hover:scale-110 transition-transform">👈</span>
@@ -222,7 +219,7 @@ export default function RizingCaseStudy({ onBackToHome, onNavigateToLumio, onNav
 
 
       </main>
-      <Footer onNavigateToLumio={onNavigateToLumio} onNavigateToRizing={() => { }} onNavigateToDB={onNavigateToDB} />
+      <Footer />
     </div>
   );
 }
