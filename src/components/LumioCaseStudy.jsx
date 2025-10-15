@@ -146,7 +146,7 @@ export default function LumioCaseStudy() {
         </div>
 
         {/* Problem Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-12">
+        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Problem</SectionTitle>
             <div className="flex flex-col md:flex-row gap-[24px] items-start w-full md:w-[1022px]">
@@ -165,17 +165,17 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Solution Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-12 md:py-[64px]">
+        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Solution</SectionTitle>
             <div className="flex flex-col md:flex-row gap-[24px] items-start h-auto md:h-[601px]">
               <div className="flex flex-col gap-[24px] w-full md:w-[476px]">
-                <Card title="Designing with constrains" className="h-auto md:h-[294px]">
+                <Card title="Designing with constrains" className="h-auto">
                   <p>
                     API adoption is highly context-dependent. Unlike products with standardized user journeys, the way users interact with API documentation varies significantly based on both the API itself and its target users. Given that we had a time schedule of 3 months and I was the only designer, I focused on simplicity while building the MVP.
                   </p>
                 </Card>
-                <Card title="The Vision">
+                <Card title="The Vision" className="h-auto">
                   <p>
                     A smart and purposeful use of AI: instead of adding to the workload of already busy teams, AI would step in to handle the many questions that arise during the API adoption process. This vision was shaped by the founder's own experience working as a Software Developer and Product Manager.
                   </p>
@@ -197,7 +197,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Exploring User Needs Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-12 md:py-[64px]">
+        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
           <div className="flex flex-col gap-[24px] w-full md:w-[1022px]">
             <SectionSubtitle>Exploring user needs</SectionSubtitle>
             <div className="bg-neutral-50 rounded-[18.68px] p-4 md:p-[32px] relative">
@@ -217,7 +217,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Laying the Foundation Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-12 md:py-[64px]">
+        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
           <div className="mb-[32px] w-full md:w-[404px]">
             <SectionSubtitle className="mb-[24px]">Laying the foundation for the MVP</SectionSubtitle>
             <BodyText>
@@ -231,7 +231,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Market Analysis Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-12 md:py-[64px]">
+        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
           <div className="mb-[32px] w-full md:w-[388px]">
             <SectionSubtitle className="mb-[24px]">How Lumio stands out</SectionSubtitle>
             <BodyText>
@@ -245,7 +245,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Wireframes Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-12 md:py-[64px]">
+        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
           <SectionTitle className="mb-[32px]">Wireframes</SectionTitle>
           <ImageSection
             src={lumioWireframe}
@@ -254,7 +254,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Outcome Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-12 md:py-[64px]">
+        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
           <SectionTitle className="mb-[32px]">Outcome</SectionTitle>
           <ImageSection
             src={lumioOutcome}
@@ -263,8 +263,8 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Brand Identity Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-12 md:py-[64px]">
-          <SectionTitle className="mb-[32px]">Brand Identity</SectionTitle>
+        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
+          <SectionSubtitle className="mb-[32px]">Brand Identity</SectionSubtitle>
           <ImageSection
             src={lumioBrandIdentity}
             alt="Lumio brand identity and visual design system"
@@ -272,7 +272,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Impact & Learnings Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-12 md:py-[64px]">
+        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
           <SectionSubtitle className="mb-[32px]">Impact & Learnings</SectionSubtitle>
           <div className="flex flex-col md:flex-row gap-[24px] md:gap-[36px] w-full md:w-[919px]">
             <Card title="Improve testing strategy" className="w-full md:w-[440px] h-auto md:h-[283px]">

@@ -13,7 +13,7 @@ import Footer from './Footer';
 
 function SectionTitle({ children, className = "" }) {
   return (
-    <h2 className={`text-[#1A1A25] text-[28px] sm:text-[32px] md:text-[36px] leading-tight font-['Helvetica_Neue'] font-medium ${className}`}>
+    <h2 className={`text-[#1A1A25] text-[28px] sm:text-[36px] md:text-[48px] leading-tight font-['Helvetica_Neue'] ${className}`}>
       {children}
     </h2>
   );
@@ -119,8 +119,8 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Problem */}
-        <section className="max-w-6xl mx-auto py-12 md:py-16 px-4 sm:px-6 lg:px-8" >
-          <SectionTitle className="mb-6 md:mb-8">Problem</SectionTitle>
+        <section className="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8" >
+          <SectionTitle className="mb-6 md:mb-8 text-[28px] sm:text-[36px] md:text-[48px]">Problem</SectionTitle>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div className="bg-white rounded-2xl md:rounded-3xl border border-[#bebebe]">
               <div className="px-6 md:px-8 py-5 md:py-6">
@@ -146,8 +146,8 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Solution */}
-        <section className="max-w-6xl mx-auto py-12 md:py-16 px-4 sm:px-6 lg:px-8">
-          <SectionTitle className="mb-6 md:mb-8">Solution</SectionTitle>
+        <section className="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+          <SectionTitle className="mb-6 md:mb-8 text-[28px] sm:text-[36px] md:text-[48px]">Solution</SectionTitle>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div className="bg-white rounded-2xl md:rounded-3xl border border-[#bebebe]">
               <div className="px-6 md:px-8 py-5 md:py-6">
@@ -162,14 +162,14 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Logo Development */}
-        <section className="max-w-6xl mx-auto py-12 md:py-16 px-4 sm:px-6 lg:px-8">
-          <SectionTitle className="mb-4 md:mb-6">Logo Development</SectionTitle>
+        <section className="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+          <SectionSubtitle className="mb-4 md:mb-6">Logo Development</SectionSubtitle>
           <ImageSection src={rizingLogoDevelopment} alt="Rizing logo development" />
         </section>
 
         {/* Brand Identity */}
-        <section className="max-w-6xl mx-auto py-12 md:py-16 px-4 sm:px-6 lg:px-8">
-          <SectionTitle className="mb-4 md:mb-6">Introducing the new brand identity</SectionTitle>
+        <section className="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+          <SectionSubtitle className="mb-4 md:mb-6">Introducing the new brand identity</SectionSubtitle>
           <BodyText className="mb-6 md:mb-8 max-w-full md:max-w-md">
             I created brand assets to match with a trustworthy and dynamic vibe to target Tech professionals who value
             authenticity and sustainable growth.
@@ -180,10 +180,6 @@ export default function RizingCaseStudy() {
         {/* Outcome */}
         <section className="max-w-6xl mx-auto py-12 md:py-16 px-4 sm:px-6 lg:px-8">
           <SectionTitle className="mb-4 md:mb-6">Outcome</SectionTitle>
-
-
-
-
           {/* Outcome Images */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
             {/* First image - full width on left column */}

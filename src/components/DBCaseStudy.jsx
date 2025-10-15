@@ -16,7 +16,13 @@ import Footer from './Footer';
 
 function SectionTitle({ children, className = "" }) {
   return (
-    <h2 className={`text-[#1A1A25] text-[32px] sm:text-[36px] leading-tight font-['Helvetica_Neue'] font-medium ${className}`}>{children}</h2>
+    <h2 className={`text-[#1A1A25] text-[32px] sm:text-[36px] md:text-[48px] leading-tight font-['Helvetica_Neue'] font-normal ${className}`}>{children}</h2>
+  );
+}
+
+function SectionSubtitle({ children, className = "" }) {
+  return (
+    <h3 className={`text-[#1A1A25] text-[20px] sm:text-[24px] md:text-[28px] leading-[1.2] md:leading-[30px] font-['Helvetica_Neue'] font-medium ${className}`}>{children}</h3>
   );
 }
 
@@ -55,12 +61,12 @@ export default function DBCaseStudy() {
                 </span>
               </h1>
             </div>
-            <div className="mt-8 sm:mt-12 lg:mt-[136px] px-4 max-w-[860px] mx-auto">
+            <div className="mt-8 sm:mt-12 px-4 max-w-[860px] mx-auto">
               <ImageSection src={dbHero} alt="DB hero" />
             </div>
 
             {/* My Role and Tools - responsive layout */}
-            <div className="mt-12 sm:mt-16 lg:mt-24 px-4 sm:px-6 lg:px-[140px] flex flex-col lg:flex-row gap-8 lg:gap-[279px]">
+            <div className="px-4 sm:px-6 lg:px-[140px] flex flex-col lg:flex-row gap-8 lg:gap-[279px]">
               <div className="w-full lg:w-[726px]">
                 <div className="font-['Helvetica_Neue:Medium',_sans-serif] text-[#000000] text-[20px] sm:text-[24px] mb-4 sm:mb-6">
                   <p className="leading-[1.25]">🔥 My Role</p>
@@ -92,7 +98,7 @@ export default function DBCaseStudy() {
         <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-8 sm:py-12 lg:py-16">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-[80px] items-start">
             <div className="flex flex-col gap-4 sm:gap-6 w-full lg:w-[440px]">
-              <h2 className="text-[#000000] text-[32px] sm:text-[40px] lg:text-[48px] leading-tight lg:leading-[44px] font-['Helvetica_Neue'] font-normal">Problem</h2>
+              <SectionTitle>Problem</SectionTitle>
               <div className="bg-white rounded-3xl border border-[#bebebe]">
                 <div className="px-6 sm:px-8 py-5 sm:py-6">
                   <h4 className="text-[#000000] text-[20px] sm:text-[24px] font-medium font-['Helvetica_Neue'] leading-[30px] mb-6 sm:mb-10">It's not always the happy flow</h4>
@@ -119,16 +125,16 @@ export default function DBCaseStudy() {
         </section>
 
         {/* Pain Points under Problem */}
-        <section className="w-full px-4 sm:px-6 lg:px-0 pb-8 sm:pb-12 lg:pb-16">
+        <section className="w-full px-4 sm:px-6 lg:px-0 py-6">
           <div className="max-w-[1280px] mx-auto lg:px-[140px]">
-            <h3 className="text-[#000000] text-[20px] sm:text-[22px] lg:text-[24px] leading-[30px] font-['Helvetica_Neue'] font-medium mb-6 sm:mb-8">Pain Points</h3>
+            <SectionSubtitle className="mb-6 sm:mb-8">Pain Points</SectionSubtitle>
             <ImageSection src={dbPainPoints} alt="Pain Points – Deutsche Bahn" />
           </div>
         </section>
 
         {/* Solution */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-8 sm:py-12 lg:py-16">
-          <h2 className="text-[#000000] text-[32px] sm:text-[40px] lg:text-[48px] leading-tight lg:leading-[44px] font-['Helvetica_Neue'] font-normal mb-6 sm:mb-8">Solution</h2>
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-8">
+          <SectionTitle className="mb-6 sm:mb-8">Solution</SectionTitle>
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-11 items-start lg:items-center">
             <div className="flex flex-col gap-6 sm:gap-8 w-full lg:w-[603px]">
               <h3 className="text-[#000000] text-[20px] sm:text-[22px] lg:text-[24px] font-medium font-['Helvetica_Neue'] leading-[1.25]">
@@ -167,18 +173,18 @@ export default function DBCaseStudy() {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-[597px] h-auto lg:h-[884px] relative">
+            <div className="w-full lg:w-[597px] h-auto relative">
               <ImageSection src={dbSolution} alt="DB solution" className="w-full h-auto" />
             </div>
           </div>
         </section>
 
         {/* Mid-fidelity screens */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-8 sm:py-12 lg:py-16">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-8">
           <div className="flex flex-col gap-2.5 mb-6 sm:mb-8">
-            <h3 className="text-[#000000] text-[20px] sm:text-[22px] lg:text-[24px] font-medium font-['Helvetica_Neue'] leading-[1.25]">
+            <SectionSubtitle>
               Mid-fidelity screens
-            </h3>
+            </SectionSubtitle>
             <BodyText className="leading-[1.25] max-w-[404px]">
               A more user-centered booking experience of managing travel add-ons like bikes and pets.
             </BodyText>
@@ -232,17 +238,17 @@ export default function DBCaseStudy() {
         </section>
 
         {/* Outcome */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-8 sm:py-12 lg:py-16">
-          <h2 className="text-[#000000] text-[32px] sm:text-[40px] lg:text-[48px] leading-tight lg:leading-[44px] font-['Helvetica_Neue'] font-normal mb-6 sm:mb-8">Outcome</h2>
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-8">
+          <SectionTitle className="mb-6 sm:mb-8">Outcome</SectionTitle>
           <ImageSection src={dbOutcome} alt="DB outcome" />
         </section>
 
         {/* Impact & Learnings */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-8 sm:py-12 lg:py-16">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-8">
           <div className="mb-6 sm:mb-8">
-            <h3 className="text-[#000000] text-[20px] sm:text-[22px] lg:text-[24px] font-medium font-['Helvetica_Neue'] leading-[30px] text-left">
+            <SectionSubtitle>
               Impact & Learnings
-            </h3>
+            </SectionSubtitle>
           </div>
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start">
             <div className="bg-white rounded-3xl border border-[#bebebe] w-full lg:w-[411px]">
