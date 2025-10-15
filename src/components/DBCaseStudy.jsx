@@ -22,7 +22,7 @@ function SectionTitle({ children, className = "" }) {
 
 function BodyText({ children, className = "" }) {
   return (
-    <p className={`text-[#8a8a8a] text-[18px] leading-[28px] font-['Helvetica_Neue'] ${className}`}>{children}</p>
+    <p className={`text-[#8a8a8a] text-[18px] leading-[1.25] font-['Helvetica_Neue'] ${className}`}>{children}</p>
   );
 }
 
@@ -110,7 +110,7 @@ export default function DBCaseStudy() {
                     <img src={dbProblemStatementDecorative} alt="Problem Statement" className="w-full h-full object-contain" />
                   </div>
                 </div>
-                <p className="text-white text-[20px] sm:text-[26px] lg:text-[32px] font-['Helvetica_Neue'] leading-[1.25]">
+                <p className="text-white text-[20px] sm:text-[26px] lg:text-[32px] font-['Helvetica_Neue'] leading-[1.15]">
                   For travelers with more complex needs Deutsche Bahn's booking flow is unclear, inconsistent, and fragmented. Key information is hidden behind external links, or missing entirely.
                 </p>
               </div>
@@ -183,12 +183,12 @@ export default function DBCaseStudy() {
               A more user-centered booking experience of managing travel add-ons like bikes and pets.
             </BodyText>
           </div>
-          <div className="bg-[#d4dde2] h-auto min-h-[400px] sm:min-h-[600px] w-full overflow-hidden relative rounded-lg mb-6 sm:mb-8">
+          <div className="bg-[#d4dde2] h-auto min-h-[400px] sm:min-h-[600px] w-full overflow-hidden relative rounded-[25px] mb-6 sm:mb-8">
             <ImageSection src={dbMidFidelity} alt="DB mid fidelity screens" className="w-full h-auto" />
           </div>
           <div className="flex justify-center">
             <div className="bg-white rounded-[25px] border border-[#BEBEBE] p-6 sm:p-12 lg:p-20 max-w-[980px] w-full">
-              <div className="flex flex-col lg:flex-row gap-8 lg:gap-[66px] items-start">
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-[66px] items-center">
                 <div className="flex flex-col justify-center gap-4 sm:gap-6 w-full lg:w-[464px]">
                   <h3 className="text-[#000000] text-[20px] sm:text-[22px] lg:text-[24px] font-medium font-['Helvetica_Neue'] leading-[1.25]">
                     Considerations after testing the flow
@@ -198,7 +198,7 @@ export default function DBCaseStudy() {
                   </BodyText>
                   <div className="flex flex-col gap-4 sm:gap-6 w-full max-w-[434px]">
                     <div className="flex flex-row gap-3 items-start">
-                      <div className="text-[#000000] text-[24px] sm:text-[32px] leading-[32px] w-6 sm:w-8 h-6 sm:h-8 flex-shrink-0">
+                      <div className="text-[#000000] text-[24px] sm:text-[24px] leading-[32px] w-6 sm:w-8 h-6 sm:h-8 flex-shrink-0">
                         ❌
                       </div>
                       <BodyText className="leading-[1.25] flex-1">
@@ -206,7 +206,7 @@ export default function DBCaseStudy() {
                       </BodyText>
                     </div>
                     <div className="flex flex-row gap-3 items-start">
-                      <div className="text-[#000000] text-[24px] sm:text-[32px] leading-[32px] w-6 sm:w-8 h-6 sm:h-8 flex-shrink-0">
+                      <div className="text-[#000000] text-[24px] sm:text-[24px] leading-[32px] w-6 sm:w-8 h-6 sm:h-8 flex-shrink-0">
                         ❌
                       </div>
                       <BodyText className="leading-[1.25] flex-1">
@@ -214,7 +214,7 @@ export default function DBCaseStudy() {
                       </BodyText>
                     </div>
                     <div className="flex flex-row gap-3 items-start">
-                      <div className="text-[#000000] text-[24px] sm:text-[32px] leading-[32px] w-6 sm:w-8 h-6 sm:h-8 flex-shrink-0">
+                      <div className="text-[#000000] text-[24px] sm:text-[24px] leading-[32px] w-6 sm:w-8 h-6 sm:h-8 flex-shrink-0">
                         ❌
                       </div>
                       <BodyText className="leading-[1.25] flex-1">
