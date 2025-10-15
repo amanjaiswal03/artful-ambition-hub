@@ -1,12 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function NavBar({ showBackButton = false }) {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownRef = useRef(null);
     const navigate = useNavigate();
     const location = useLocation();
 
     const isHomePage = location.pathname === '/';
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (isDropdownOpen && dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsDropdownOpen(false);
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside);
+        document.addEventListener('touchstart', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            document.removeEventListener('touchstart', handleClickOutside);
+        };
+    }, [isDropdownOpen]);
 
     return (
         <div
@@ -32,7 +48,7 @@ export default function NavBar({ showBackButton = false }) {
                     <p className="block leading-[22px] sm:leading-[32px]">Product Designer</p>
                 </div>
             </div>
-            <div className="relative">
+            <div className="relative" ref={dropdownRef}>
                 <button
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                     className="bg-[#e9e9e9] box-border content-stretch flex flex-row gap-px h-11 items-center justify-center p-0 relative rounded-[13px] shrink-0 w-[160px] sm:w-[181px] hover:bg-[#ddd] transition-colors"
@@ -40,7 +56,7 @@ export default function NavBar({ showBackButton = false }) {
                     <div className="font-['Helvetica_Neue:Medium',_sans-serif] h-8 leading-[0] not-italic relative shrink-0 text-[#8e8e8e] text-[16px] sm:text-[18px] text-left flex-1 text-center">
                         <p className="block leading-[28px] sm:leading-[32px]">Case Studies</p>
                     </div>
-                    <div className={`relative shrink-0 mr-2 size-6 sm:size-8 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}>
+                    <div className={`relative shrink-0 mr-2 size-6 sm:size-7 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`}>
                         <svg className="block max-w-none size-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 9L12 15L18 9" stroke="#8e8e8e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
