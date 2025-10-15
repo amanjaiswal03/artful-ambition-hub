@@ -83,6 +83,9 @@ export default function LumioCaseStudy() {
               />
             </div>
 
+            {/* Top fade/blur effect to mirror bottom transition */}
+            <div className="absolute top-0 left-0 right-0 h-[120px] md:h-[160px] bg-gradient-to-b from-white to-transparent pointer-events-none z-[1]" />
+
             {/* Title - Responsive - Above image on both mobile and desktop */}
             <div className="relative md:absolute w-full md:w-[880px] md:left-[200px] pt-8 md:pt-0 md:top-[103px] px-4 md:px-0 z-10">
               <p className="font-['Helvetica_Neue'] font-normal text-[28px] md:text-[48px] leading-[1.2] md:leading-[60px] text-black text-center">
