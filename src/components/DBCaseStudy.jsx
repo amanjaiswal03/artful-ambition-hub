@@ -134,7 +134,7 @@ export default function DBCaseStudy() {
           <SectionTitle className="mb-6 sm:mb-8">Solution</SectionTitle>
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-11 items-start lg:items-center">
             <div className="flex flex-col gap-6 sm:gap-8 w-full lg:w-[603px]">
-              <h3 className="text-[#000000] text-[20px] sm:text-[22px] lg:text-[24px] font-medium font-['Helvetica_Neue'] leading-[1.25]">
+              <h3 className="text-[#000000] text-[18px] sm:text-[20px] lg:text-[24px] font-medium font-['Helvetica_Neue'] leading-[1.25]">
                 Making complex travel scenarios easy to book
               </h3>
               <div className="flex flex-col gap-[9px]">
@@ -193,7 +193,7 @@ export default function DBCaseStudy() {
             <div className="bg-white rounded-[25px] border border-[#BEBEBE] p-6 sm:p-12 lg:p-20 max-w-[980px] w-full">
               <div className="flex flex-col lg:flex-row gap-8 lg:gap-[66px] items-center">
                 <div className="flex flex-col justify-center gap-4 sm:gap-6 w-full lg:w-[464px]">
-                  <h3 className="text-[#000000] text-[20px] sm:text-[22px] lg:text-[24px] font-medium font-['Helvetica_Neue'] leading-[1.25]">
+                  <h3 className="text-[#000000] text-[18px] sm:text-[20px] lg:text-[24px] font-medium font-['Helvetica_Neue'] leading-[1.25]">
                     Considerations after testing the flow
                   </h3>
                   <BodyText className="leading-[1.25]">
@@ -250,7 +250,7 @@ export default function DBCaseStudy() {
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start">
             <div className="bg-white rounded-3xl border border-[#bebebe] w-full lg:w-[411px]">
               <div className="px-6 sm:px-8 py-5 sm:py-6 flex flex-col gap-8 sm:gap-[45px]">
-                <h3 className="text-[#000000] text-[20px] sm:text-[24px] font-medium font-['Helvetica_Neue'] leading-[30px]">
+                <h3 className="text-[#000000] text-[18px] sm:text-[20px] lg:text-[24px] font-medium font-['Helvetica_Neue'] leading-[30px]">
                   Small Issue – Big Impact
                 </h3>
                 <div className="text-[#8a8a8a] text-[16px] sm:text-[18px] font-['Helvetica_Neue'] leading-[1.25] space-y-4">
