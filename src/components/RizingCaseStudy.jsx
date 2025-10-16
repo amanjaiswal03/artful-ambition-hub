@@ -35,6 +35,21 @@ function BodyText({ children, className = "" }) {
   );
 }
 
+function Card({ title, children, className = "" }) {
+  return (
+    <div className={`bg-white border border-[#bebebe] border-solid rounded-[16px] md:rounded-[24px] ${className}`}>
+      <div className="box-border flex flex-col gap-[24px] md:gap-[45px] items-start px-[20px] md:px-[32px] py-[20px] md:py-[24px]">
+        <h3 className="text-black text-[18px] sm:text-[20px] md:text-[24px] leading-[1.2] md:leading-[30px] font-['Helvetica_Neue'] font-medium">
+          {title}
+        </h3>
+        <div className="text-[#8a8a8a] text-[14px] sm:text-[16px] md:text-[18px] leading-[1.25] font-['Helvetica_Neue'] font-normal">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ImageSection({ src, alt, className = "" }) {
   return (
     <div className={`w-full rounded-2xl overflow-hidden  ${className}`}>
@@ -66,8 +81,8 @@ export default function RizingCaseStudy() {
             <div
               className="relative md:absolute font-['Helvetica_Neue:Regular',_sans-serif] leading-[1.2] md:leading-[60px] left-0 md:left-1/2 not-italic text-[#000000] text-[28px] sm:text-[36px] md:text-[48px] text-center top-[20px] md:top-[103px] md:transform md:-translate-x-1/2 w-full md:w-[880px] px-4 md:px-0"
             >
-              <p className="block mb-0">A Rebrand to Support Growth from </p>
-              <p className="block">1:1 Coaching to Company Partnerships</p>
+              <p className="block mb-0">A rebrand to support growth from </p>
+              <p className="block">1:1 coaching to company partnerships</p>
             </div>
 
             {/* Device mock with hero image */}
@@ -118,45 +133,40 @@ export default function RizingCaseStudy() {
           </div>
         </section>
 
-        {/* Problem */}
-        <section className="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8" >
-          <SectionTitle className="mb-6 md:mb-8">Problem</SectionTitle>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <div className="bg-white rounded-2xl md:rounded-3xl border border-[#bebebe]">
-              <div className="px-6 md:px-8 py-5 md:py-6">
-                <h4 className="text-[#1A1A25] text-[18px] sm:text-[20px] md:text-[24px] font-medium font-['Helvetica_Neue'] mb-6 md:mb-10">Shifting the focus</h4>
-                <BodyText>
+        {/* Problem Section */}
+        <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-[24px]">
+            <SectionTitle>Problem</SectionTitle>
+            <div className="flex flex-col md:flex-row gap-[24px] items-start w-full md:w-[1022px]">
+              <Card title="Shifting the focus" className="w-full md:w-[520px]">
+                <p>
                   The rebranding marked a shift from a female-specific focus to a more gender-neutral approach,
                   reflecting the company's growing and diverse client base. The founder Irene renamed the company
                   Rizing—a name inspired by the Gen Z slang "rizz" (referring to charisma) and the word "rising."
-                </BodyText>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl md:rounded-3xl border border-[#bebebe]">
-              <div className="px-6 md:px-8 py-5 md:py-6">
-                <h4 className="text-[#1A1A25] text-[18px] sm:text-[20px] md:text-[24px] font-medium font-['Helvetica_Neue'] mb-6 md:mb-10">Scaling the business</h4>
-                <BodyText>
+                </p>
+              </Card>
+              <Card title="Scaling the business" className="w-full md:w-[544px]">
+                <p>
                   The new brand identity also lays the foundation for scaling the business beyond 1:1 coaching into
                   working with companies. It speaks directly to a broader target audience: tech and business professionals seeking to elevate their
                   careers — from aspiring leaders to established executives.
-                </BodyText>
-              </div>
+                </p>
+              </Card>
             </div>
           </div>
         </section>
 
         {/* Solution */}
         <section className="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-          <SectionTitle className="mb-6 md:mb-8">Solution</SectionTitle>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-            <div className="bg-white rounded-2xl md:rounded-3xl border border-[#bebebe]">
-              <div className="px-6 md:px-8 py-5 md:py-6">
-                <h4 className="text-[#1A1A25] text-[20px] md:text-[24px] font-medium font-['Helvetica_Neue'] mb-6 md:mb-10">Aligning core values</h4>
-                <BodyText>
-                  In conversations with Irene, I explored her core values to better understand her vision. This
-                  served as the foundation for designing the logo and developing a new brand identity.
-                </BodyText>
-              </div>
+          <div className="flex flex-col gap-[24px]">
+            <SectionTitle>Solution</SectionTitle>
+            <div className="flex flex-col md:flex-row gap-[24px] items-start w-full md:w-[1022px]">
+              <Card title="Brand Identity" className="w-full md:w-[520px]">
+                <p>
+                  I created brand assets to match with a trustworthy and dynamic vibe to target Tech professionals who value
+                  authenticity and sustainable growth.
+                </p>
+              </Card>
             </div>
           </div>
         </section>

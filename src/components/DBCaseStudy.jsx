@@ -53,12 +53,9 @@ export default function DBCaseStudy() {
         <div className="relative w-full overflow-hidden">
           <div className="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-0">
             <div className="text-center pt-8 sm:pt-12 lg:pt-[103px] px-4">
-              <h1 className="font-['Helvetica_Neue:Regular',_sans-serif] leading-tight sm:leading-[60px] text-[#000000] text-[28px] sm:text-[36px] lg:text-[48px] max-w-[880px] mx-auto">
-                <span>Designing a Unified Multi-Item Booking Flow for </span>
-                <span className="inline-flex items-center gap-2 align-middle">
-                  <span>Deutsche Bahn</span>
-                  <img src={dbLogo} alt="DB" className="h-6 sm:h-8 lg:h-10 w-auto" />
-                </span>
+              <h1 className="font-['Helvetica_Neue:Regular',_sans-serif] leading-tight text-[#000000] text-[28px] sm:text-[36px] lg:text-[48px] max-w-[880px] mx-auto">
+                <div className="block">Designing a Unified Multi-Item Booking</div>
+                <div className="block">Flow for Deutsche <span className="inline-flex items-end gap-2">Bahn<img src={dbLogo} alt="DB" className="h-6 sm:h-8 lg:h-10 w-auto mb-2" /></span></div>
               </h1>
             </div>
             <div className="mt-8 sm:mt-12 px-4 max-w-[860px] mx-auto">
