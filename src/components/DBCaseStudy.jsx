@@ -16,19 +16,19 @@ import Footer from './Footer';
 
 function SectionTitle({ children, className = "" }) {
   return (
-    <h2 className={`text-[#1A1A25] text-[32px] sm:text-[36px] md:text-[48px] leading-tight font-['Helvetica_Neue'] font-normal ${className}`}>{children}</h2>
+    <h2 className={`text-[#1A1A25] text-[28px] sm:text-[36px] md:text-[48px] leading-tight font-['Helvetica_Neue'] font-normal ${className}`}>{children}</h2>
   );
 }
 
 function SectionSubtitle({ children, className = "" }) {
   return (
-    <h3 className={`text-[#1A1A25] text-[20px] sm:text-[24px] md:text-[28px] leading-[1.2] md:leading-[30px] font-['Helvetica_Neue'] font-medium ${className}`}>{children}</h3>
+    <h3 className={`text-[#1A1A25] text-[18px] sm:text-[20px] md:text-[24px] leading-[1.2] md:leading-[30px] font-['Helvetica_Neue'] font-medium ${className}`}>{children}</h3>
   );
 }
 
 function BodyText({ children, className = "" }) {
   return (
-    <p className={`text-[#8a8a8a] text-[18px] leading-[1.25] font-['Helvetica_Neue'] ${className}`}>{children}</p>
+    <p className={`text-[#8a8a8a] text-[14px] sm:text-[16px] md:text-[18px] leading-[1.25] font-['Helvetica_Neue'] ${className}`}>{children}</p>
   );
 }
 

@@ -21,7 +21,7 @@ function SectionTitle({ children, className = "" }) {
 
 function SectionSubtitle({ children, className = "" }) {
   return (
-    <h3 className={`text-[#1A1A25] text-[24px] sm:text-[28px] leading-tight font-['Helvetica_Neue'] font-medium ${className}`}>
+    <h3 className={`text-[#1A1A25] text-[18px] sm:text-[20px] md:text-[24px] leading-tight font-['Helvetica_Neue'] font-medium ${className}`}>
       {children}
     </h3>
   );
@@ -29,7 +29,7 @@ function SectionSubtitle({ children, className = "" }) {
 
 function BodyText({ children, className = "" }) {
   return (
-    <p className={`text-[#8a8a8a] text-[16px] md:text-[18px] leading-[1.6] md:leading-[28px] font-['Helvetica_Neue'] ${className}`}>
+    <p className={`text-[#8a8a8a] text-[14px] sm:text-[16px] md:text-[18px] leading-[1.6] md:leading-[28px] font-['Helvetica_Neue'] ${className}`}>
       {children}
     </p>
   );
@@ -120,11 +120,11 @@ export default function RizingCaseStudy() {
 
         {/* Problem */}
         <section className="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8" >
-          <SectionTitle className="mb-6 md:mb-8 text-[28px] sm:text-[36px] md:text-[48px]">Problem</SectionTitle>
+          <SectionTitle className="mb-6 md:mb-8">Problem</SectionTitle>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div className="bg-white rounded-2xl md:rounded-3xl border border-[#bebebe]">
               <div className="px-6 md:px-8 py-5 md:py-6">
-                <h4 className="text-[#1A1A25] text-[20px] md:text-[24px] font-medium font-['Helvetica_Neue'] mb-6 md:mb-10">Shifting the focus</h4>
+                <h4 className="text-[#1A1A25] text-[18px] sm:text-[20px] md:text-[24px] font-medium font-['Helvetica_Neue'] mb-6 md:mb-10">Shifting the focus</h4>
                 <BodyText>
                   The rebranding marked a shift from a female-specific focus to a more gender-neutral approach,
                   reflecting the company's growing and diverse client base. The founder Irene renamed the company
@@ -134,7 +134,7 @@ export default function RizingCaseStudy() {
             </div>
             <div className="bg-white rounded-2xl md:rounded-3xl border border-[#bebebe]">
               <div className="px-6 md:px-8 py-5 md:py-6">
-                <h4 className="text-[#1A1A25] text-[20px] md:text-[24px] font-medium font-['Helvetica_Neue'] mb-6 md:mb-10">Scaling the business</h4>
+                <h4 className="text-[#1A1A25] text-[18px] sm:text-[20px] md:text-[24px] font-medium font-['Helvetica_Neue'] mb-6 md:mb-10">Scaling the business</h4>
                 <BodyText>
                   The new brand identity also lays the foundation for scaling the business beyond 1:1 coaching into
                   working with companies. It speaks directly to a broader target audience: tech and business professionals seeking to elevate their
@@ -147,7 +147,7 @@ export default function RizingCaseStudy() {
 
         {/* Solution */}
         <section className="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-          <SectionTitle className="mb-6 md:mb-8 text-[28px] sm:text-[36px] md:text-[48px]">Solution</SectionTitle>
+          <SectionTitle className="mb-6 md:mb-8">Solution</SectionTitle>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             <div className="bg-white rounded-2xl md:rounded-3xl border border-[#bebebe]">
               <div className="px-6 md:px-8 py-5 md:py-6">

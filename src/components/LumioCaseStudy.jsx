@@ -16,7 +16,7 @@ import Footer from './Footer';
 
 function SectionTitle({ children, className = "" }) {
   return (
-    <h2 className={`text-black text-[32px] md:text-[48px] leading-[1.2] md:leading-[57px] font-['Helvetica_Neue'] font-normal ${className}`}>
+    <h2 className={`text-black text-[28px] sm:text-[36px] md:text-[48px] leading-[1.2] md:leading-[57px] font-['Helvetica_Neue'] font-normal ${className}`}>
       {children}
     </h2>
   );
@@ -24,7 +24,7 @@ function SectionTitle({ children, className = "" }) {
 
 function SectionSubtitle({ children, className = "" }) {
   return (
-    <h3 className={`text-black text-[20px] md:text-[24px] leading-[1.2] md:leading-[30px] font-['Helvetica_Neue'] font-medium ${className}`}>
+    <h3 className={`text-black text-[18px] sm:text-[20px] md:text-[24px] leading-[1.2] md:leading-[30px] font-['Helvetica_Neue'] font-medium ${className}`}>
       {children}
     </h3>
   );
@@ -32,7 +32,7 @@ function SectionSubtitle({ children, className = "" }) {
 
 function BodyText({ children, className = "" }) {
   return (
-    <p className={`text-[#8a8a8a] text-[16px] md:text-[18px] leading-[1.25] font-['Helvetica_Neue'] font-normal ${className}`}>
+    <p className={`text-[#8a8a8a] text-[14px] sm:text-[16px] md:text-[18px] leading-[1.25] font-['Helvetica_Neue'] font-normal ${className}`}>
       {children}
     </p>
   );
@@ -42,10 +42,10 @@ function Card({ title, children, className = "" }) {
   return (
     <div className={`bg-white border border-[#bebebe] border-solid rounded-[16px] md:rounded-[24px] ${className}`}>
       <div className="box-border flex flex-col gap-[24px] md:gap-[45px] items-start px-[20px] md:px-[32px] py-[20px] md:py-[24px]">
-        <h3 className="text-black text-[20px] md:text-[24px] leading-[1.2] md:leading-[30px] font-['Helvetica_Neue'] font-medium">
+        <h3 className="text-black text-[18px] sm:text-[20px] md:text-[24px] leading-[1.2] md:leading-[30px] font-['Helvetica_Neue'] font-medium">
           {title}
         </h3>
-        <div className="text-[#8a8a8a] text-[16px] md:text-[18px] leading-[1.25] font-['Helvetica_Neue'] font-normal">
+        <div className="text-[#8a8a8a] text-[14px] sm:text-[16px] md:text-[18px] leading-[1.25] font-['Helvetica_Neue'] font-normal">
           {children}
         </div>
       </div>
@@ -170,12 +170,12 @@ export default function LumioCaseStudy() {
             <SectionTitle>Solution</SectionTitle>
             <div className="flex flex-col md:flex-row gap-[24px] items-start h-auto md:h-[601px]">
               <div className="flex flex-col gap-[24px] w-full md:w-[476px]">
-                <Card title="Designing with constrains" className="h-auto">
+                <Card title="Designing with constrains" className="w-full md:w-[440px]">
                   <p>
                     API adoption is highly context-dependent. Unlike products with standardized user journeys, the way users interact with API documentation varies significantly based on both the API itself and its target users. Given that we had a time schedule of 3 months and I was the only designer, I focused on simplicity while building the MVP.
                   </p>
                 </Card>
-                <Card title="The Vision" className="h-auto">
+                <Card title="The Vision" className="w-full md:w-[440px]">
                   <p>
                     A smart and purposeful use of AI: instead of adding to the workload of already busy teams, AI would step in to handle the many questions that arise during the API adoption process. This vision was shaped by the founder's own experience working as a Software Developer and Product Manager.
                   </p>
