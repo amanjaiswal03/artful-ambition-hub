@@ -141,7 +141,7 @@ export default function LandingPage() {
                 <div className="mt-12">
                   <ProjectText
                     title="Deutsche Bahn"
-                    description="Designing a Unified Multi-Item Booking Flow for Deutsche Bahn"
+                    description="Designing a unified multi-item booking flow for Deutsche Bahn"
                   />
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function LandingPage() {
                 <div className="mt-20">
                   <ProjectText
                     title="Lumio"
-                    description={["Enabling Faster API Onboarding", "Through Custom Chatbot Dashboard"]}
+                    description={["Enabling faster API onboarding", "through custom chatbot dashboard"]}
                     maxWidth="max-w-[320px]"
                   />
                 </div>
@@ -177,7 +177,7 @@ export default function LandingPage() {
                 <div className="mt-12">
                   <ProjectText
                     title="Rizing"
-                    description="A Rebrand to Support Growth from 1:1 Coaching to Company Partnerships"
+                    description="A rebrand to support growth from 1:1 coaching to company partnerships"
                   />
                 </div>
               </div>
