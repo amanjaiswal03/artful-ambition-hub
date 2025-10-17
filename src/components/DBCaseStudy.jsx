@@ -65,8 +65,8 @@ export default function DBCaseStudy() {
             {/* My Role and Tools - responsive layout */}
             <div className="px-4 sm:px-6 lg:px-[140px] flex flex-col lg:flex-row gap-8 lg:gap-[279px]">
               <div className="w-full lg:w-[726px]">
-                <div className="font-['Helvetica_Neue:Medium',_sans-serif] text-[#000000] text-[20px] sm:text-[24px] mb-4 sm:mb-6">
-                  <p className="leading-[1.25]">🔥 My Role</p>
+                <div className="mb-4 sm:mb-6">
+                  <p className="font-['Helvetica_Neue'] font-medium text-[20px] sm:text-[24px] leading-[1.25] text-black">🔥 My Role</p>
                 </div>
                 <div className="font-['Helvetica_Neue:Regular',_sans-serif] text-[#8a8a8a] text-[16px] sm:text-[18px] lg:text-[20px] leading-[1.25]">
                   <p className="mb-0">
@@ -75,8 +75,8 @@ export default function DBCaseStudy() {
                 </div>
               </div>
               <div className="w-full pb-8 lg:w-[206px]">
-                <div className="font-['Helvetica_Neue:Medium',_sans-serif] text-[#000000] text-[20px] sm:text-[24px] mb-4 sm:mb-6">
-                  <p className="leading-[1.25]">Tools</p>
+                <div className="mb-4 sm:mb-6">
+                  <p className="font-['Helvetica_Neue'] font-medium text-[20px] sm:text-[24px] leading-[1.25] text-black">Tools</p>
                 </div>
                 <div className="flex flex-row items-center gap-4">
                   <div className="bg-[#ffffff] rounded-xl shadow-[1.821px_1.821px_24.719px_9.105px_rgba(0,0,0,0.22)] size-14 flex items-center justify-center">

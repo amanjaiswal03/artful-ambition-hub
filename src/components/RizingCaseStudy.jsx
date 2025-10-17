@@ -86,7 +86,7 @@ export default function RizingCaseStudy() {
             </div>
 
             {/* Device mock with hero image */}
-            <div className="relative md:absolute left-0 md:left-1/2 top-[120px] sm:top-[140px] md:top-[297px] md:-translate-x-1/2 w-full md:w-[1000px] max-w-[92vw] mx-auto">
+            <div className="relative md:absolute left-0 md:left-1/2 top-[80px] sm:top-[140px] md:top-[297px] md:-translate-x-1/2 w-full md:w-[1000px] max-w-[92vw] mx-auto">
               <ImageSection src={rizingHero} alt="Rizing hero" />
             </div>
 
@@ -95,11 +95,11 @@ export default function RizingCaseStudy() {
         </div>
 
         {/* My Role and Tools - below hero image */}
-        <section className="w-full mt-8 md:mt-0">
-          <div className="max-w-[1280px] mx-auto px-6 sm:px-6 lg:px-[140px] flex flex-col md:flex-row md:justify-between gap-8 md:gap-12">
+        <section className="w-full">
+          <div className="max-w-[1280px] mx-auto px-6 lg:px-[140px] flex flex-col md:flex-row md:justify-between gap-8 md:gap-12">
             <div className="w-full md:w-[701px]">
-              <div className="font-['Helvetica_Neue:Medium',_sans-serif] font-medium text-[#000000] text-[20px] md:text-[24px] mb-4 md:mb-6">
-                <p className="leading-[1.25]">🔥 My Role</p>
+              <div className="mb-4 md:mb-6">
+                <p className="font-['Helvetica_Neue'] font-medium text-[20px] md:text-[24px] leading-[1.25] text-black">🔥 My Role</p>
               </div>
               <div className="font-['Helvetica_Neue:Regular',_sans-serif] text-[#8a8a8a] text-[16px] md:text-[20px] leading-[1.4] md:leading-[1.25]">
                 <p className="mb-0">
@@ -110,8 +110,8 @@ export default function RizingCaseStudy() {
               </div>
             </div>
             <div className="w-full md:w-[206px]" data-name="Tools">
-              <div className="font-['Helvetica_Neue:Medium',_sans-serif] font-medium text-[#000000] text-[20px] md:text-[24px] mb-4 md:mb-6">
-                <p className="leading-[1.25]">Tools</p>
+              <div className="mb-4 md:mb-6">
+                <p className="font-['Helvetica_Neue'] font-medium text-[20px] md:text-[24px] leading-[1.25] text-black">Tools</p>
               </div>
               <div className="flex flex-row items-center gap-4">
                 <div className="bg-[#ffffff] rounded-xl shadow-[1.821px_1.821px_24.719px_9.105px_rgba(0,0,0,0.22)] size-12 md:size-14 flex items-center justify-center">
