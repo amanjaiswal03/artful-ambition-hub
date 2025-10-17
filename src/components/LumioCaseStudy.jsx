@@ -112,7 +112,7 @@ export default function LumioCaseStudy() {
             />
 
             {/* My Role and Tools sections - Responsive Layout */}
-            <div className="relative md:absolute w-full md:w-auto left-0 md:left-[140px] top-auto md:top-[911px] mt-8 md:mt-0 px-4 md:px-0 flex flex-col md:flex-row gap-8 md:gap-[140px] z-10">
+            <div className="relative md:absolute w-full md:w-auto left-0  top-auto md:top-[911px] mt-8 md:mt-0 px-4 sm:px-6 lg:px-[140px] flex flex-col md:flex-row gap-8 md:gap-[140px] z-10">
               {/* My Role section */}
               <div className="w-full md:w-[701px] flex flex-col gap-[24px]">
                 <p className="font-['Helvetica_Neue'] font-medium text-[20px] md:text-[24px] leading-[1.25] text-black">
@@ -146,7 +146,7 @@ export default function LumioCaseStudy() {
         </div>
 
         {/* Problem Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Problem</SectionTitle>
             <div className="flex flex-col md:flex-row gap-[24px] items-start w-full md:w-[1022px]">
@@ -165,7 +165,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Solution Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Solution</SectionTitle>
             <div className="flex flex-col md:flex-row gap-[24px] items-start h-auto md:h-[601px]">
@@ -197,7 +197,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Exploring User Needs Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <div className="flex flex-col gap-[24px] w-full md:w-[1022px]">
             <SectionSubtitle>Exploring user needs</SectionSubtitle>
             <div className="bg-neutral-50 rounded-[18.68px] p-4 md:p-[32px] relative">
@@ -217,7 +217,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Laying the Foundation Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <div className="mb-[32px] w-full md:w-[404px]">
             <SectionSubtitle className="mb-[24px]">Laying the foundation for the MVP</SectionSubtitle>
             <BodyText>
@@ -231,7 +231,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Market Analysis Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <div className="mb-[32px] w-full md:w-[388px]">
             <SectionSubtitle className="mb-[24px]">How Lumio stands out</SectionSubtitle>
             <BodyText>
@@ -245,7 +245,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Wireframes Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <SectionTitle className="mb-[32px]">Wireframes</SectionTitle>
           <ImageSection
             src={lumioWireframe}
@@ -254,7 +254,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Outcome Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <SectionTitle className="mb-[32px]">Outcome</SectionTitle>
           <ImageSection
             src={lumioOutcome}
@@ -263,7 +263,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Brand Identity Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <SectionSubtitle className="mb-[32px]">Brand Identity</SectionSubtitle>
           <ImageSection
             src={lumioBrandIdentity}
@@ -272,7 +272,7 @@ export default function LumioCaseStudy() {
         </section>
 
         {/* Impact & Learnings Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 md:px-[140px] py-6 sm:py-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <SectionSubtitle className="mb-[32px]">Impact & Learnings</SectionSubtitle>
           <div className="flex flex-col md:flex-row gap-[24px] md:gap-[36px] w-full md:w-[919px]">
             <Card title="Improve testing strategy" className="w-full md:w-[440px] h-auto md:h-[283px]">

@@ -95,10 +95,10 @@ export default function RizingCaseStudy() {
         </div>
 
         {/* My Role and Tools - below hero image */}
-        <section className="w-full px-4 sm:px-6 lg:px-8 mt-8 md:mt-0">
-          <div className="max-w-[1140px] mx-auto px-4 md:px-6 flex flex-col md:flex-row md:justify-between gap-8 md:gap-12">
+        <section className="w-full mt-8 md:mt-0">
+          <div className="max-w-[1280px] mx-auto px-6 sm:px-6 lg:px-[140px] flex flex-col md:flex-row md:justify-between gap-8 md:gap-12">
             <div className="w-full md:w-[701px]">
-              <div className="font-['Helvetica_Neue:Medium',_sans-serif] text-[#000000] text-[20px] md:text-[24px] mb-4 md:mb-6">
+              <div className="font-['Helvetica_Neue:Medium',_sans-serif] font-medium text-[#000000] text-[20px] md:text-[24px] mb-4 md:mb-6">
                 <p className="leading-[1.25]">🔥 My Role</p>
               </div>
               <div className="font-['Helvetica_Neue:Regular',_sans-serif] text-[#8a8a8a] text-[16px] md:text-[20px] leading-[1.4] md:leading-[1.25]">
@@ -110,7 +110,7 @@ export default function RizingCaseStudy() {
               </div>
             </div>
             <div className="w-full md:w-[206px]" data-name="Tools">
-              <div className="font-['Helvetica_Neue:Medium',_sans-serif] text-[#000000] text-[20px] md:text-[24px] mb-4 md:mb-6">
+              <div className="font-['Helvetica_Neue:Medium',_sans-serif] font-medium text-[#000000] text-[20px] md:text-[24px] mb-4 md:mb-6">
                 <p className="leading-[1.25]">Tools</p>
               </div>
               <div className="flex flex-row items-center gap-4">
@@ -134,7 +134,7 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Problem Section */}
-        <section className="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-8">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Problem</SectionTitle>
             <div className="flex flex-col md:flex-row gap-[24px] items-start w-full md:w-[1022px]">
@@ -157,7 +157,7 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Solution */}
-        <section className="max-w-6xl mx-auto py-6 px-4 sm:py-8 sm:px-6 lg:px-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Solution</SectionTitle>
             <div className="flex flex-col md:flex-row gap-[24px] items-start w-full md:w-[1022px]">
@@ -172,13 +172,13 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Logo Development */}
-        <section className="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-10">
           <SectionSubtitle className="mb-4 md:mb-6">Logo Development</SectionSubtitle>
           <ImageSection src={rizingLogoDevelopment} alt="Rizing logo development" />
         </section>
 
         {/* Brand Identity */}
-        <section className="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-10">
           <SectionSubtitle className="mb-4 md:mb-6">Introducing the new brand identity</SectionSubtitle>
           <BodyText className="mb-6 md:mb-8 max-w-full md:max-w-md">
             I created brand assets to match with a trustworthy and dynamic vibe to target Tech professionals who value
@@ -188,7 +188,7 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Outcome */}
-        <section className="max-w-6xl mx-auto py-12 md:py-16 px-4 sm:px-6 lg:px-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-12 md:py-16">
           <SectionTitle className="mb-4 md:mb-6">Outcome</SectionTitle>
           {/* Outcome Images */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
