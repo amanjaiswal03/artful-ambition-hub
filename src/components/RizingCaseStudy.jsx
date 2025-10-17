@@ -134,7 +134,7 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Problem Section */}
-        <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <section className="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Problem</SectionTitle>
             <div className="flex flex-col md:flex-row gap-[24px] items-start w-full md:w-[1022px]">
@@ -157,7 +157,7 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Solution */}
-        <section className="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <section className="max-w-6xl mx-auto py-6 px-4 sm:py-8 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Solution</SectionTitle>
             <div className="flex flex-col md:flex-row gap-[24px] items-start w-full md:w-[1022px]">
