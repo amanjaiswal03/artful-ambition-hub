@@ -76,8 +76,8 @@ export default function LandingPage() {
 
         {/* Projects */}
         <section className="w-full py-8 sm:py-16 lg:py-24">
-          {/* Mobile: Stacked Layout */}
-          <div className="md:hidden flex flex-col items-center gap-12 px-4">
+          {/* Mobile/Tablet: Stacked Layout */}
+          <div className="lg:hidden flex flex-col items-center gap-12 px-4">
             {/* Deutsche Bahn */}
             <div className="flex flex-col items-center">
               <ProjectCard
@@ -127,8 +127,8 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* Desktop/Tablet: Overlapping Layout */}
-          <div className="hidden md:block relative h-[600px] lg:h-[650px] xl:h-[700px] w-full">
+          {/* Desktop: Overlapping Layout */}
+          <div className="hidden lg:block relative h-[600px] lg:h-[650px] xl:h-[700px] w-full">
             {/* Deutsche Bahn - Left card with text */}
             <div className="absolute left-0 lg:-left-8 xl:left-0 top-8 z-10">
               <div className="flex flex-col items-center">

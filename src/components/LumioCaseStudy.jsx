@@ -73,9 +73,9 @@ export default function LumioCaseStudy() {
       <main className="pb-8 md:pb-16">
         {/* Hero Section - Responsive Design */}
         <div className="relative w-full overflow-hidden bg-gradient-to-b from-white via-white to-transparent" data-name="Hero">
-          <div className="relative w-full max-w-[1280px] mx-auto h-auto pb-8 md:pb-0 md:h-[1108px] px-4 md:px-0">
+          <div className="relative w-full max-w-[1280px] mx-auto h-auto pb-8 lg:pb-0 lg:h-[1108px] px-4 lg:px-0">
             {/* Background gradient vector - Both mobile and desktop */}
-            <div className="absolute h-[800px] md:h-[1136px] left-1/2 md:left-0 top-[-50px] md:top-[-95px] w-full md:w-[1280px] transform -translate-x-1/2 md:transform-none opacity-30 md:opacity-100">
+            <div className="absolute h-[800px] lg:h-[1136px] left-1/2 lg:left-0 top-[-50px] lg:top-[-95px] w-full lg:w-[1280px] transform -translate-x-1/2 lg:transform-none opacity-30 lg:opacity-100">
               <img
                 src={gradientVector}
                 alt=""
@@ -84,17 +84,17 @@ export default function LumioCaseStudy() {
             </div>
 
             {/* Top fade/blur effect to mirror bottom transition */}
-            <div className="absolute top-0 left-0 right-0 h-[120px] md:h-[160px] bg-gradient-to-b from-white to-transparent pointer-events-none z-[1]" />
+            <div className="absolute top-0 left-0 right-0 h-[120px] lg:h-[160px] bg-gradient-to-b from-white to-transparent pointer-events-none z-[1]" />
 
             {/* Title - Responsive - Above image on both mobile and desktop */}
-            <div className="relative md:absolute w-full md:w-[880px] md:left-[200px] pt-8 md:pt-0 md:top-[103px] px-4 md:px-0 z-10">
-              <p className="font-['Helvetica_Neue'] font-normal text-[28px] md:text-[48px] leading-[1.2] md:leading-[60px] text-black text-center">
+            <div className="relative lg:absolute w-full lg:w-[880px] lg:left-[200px] pt-8 lg:pt-0 lg:top-[103px] px-4 lg:px-0 z-10">
+              <p className="font-['Helvetica_Neue'] font-normal text-[28px] lg:text-[48px] leading-[1.2] lg:leading-[60px] text-black text-center">
                 Enabling faster API onboarding through a custom chatbot dashboard
               </p>
             </div>
 
             {/* Macbook mockup - Responsive with fade effect */}
-            <div className="relative md:absolute w-full md:w-[1009px] h-auto md:h-[589.24px] md:left-[135px] mt-8 md:mt-0 md:top-[312px] z-10">
+            <div className="relative lg:absolute w-full lg:w-[1009px] h-auto lg:h-[589.24px] lg:left-[135px] mt-8 lg:mt-0 lg:top-[312px] z-10">
               <div className="relative">
                 <img
                   src={lumioHero}
@@ -107,26 +107,26 @@ export default function LumioCaseStudy() {
             </div>
 
             {/* Gradient blur overlay for smooth transition */}
-            <div className="absolute bg-gradient-to-b from-[rgba(255,255,255,0.08)] from-[53.655%] to-white to-[72.933%] h-[800px] md:h-[1149px] left-0 top-0 w-full pointer-events-none"
+            <div className="absolute bg-gradient-to-b from-[rgba(255,255,255,0.08)] from-[53.655%] to-white to-[72.933%] h-[800px] lg:h-[1149px] left-0 top-0 w-full pointer-events-none"
               data-name="blur"
             />
 
             {/* My Role and Tools sections - Responsive Layout */}
-            <div className="relative md:absolute w-full md:w-auto left-0  top-auto md:top-[911px] mt-8 md:mt-0 px-4 sm:px-6 lg:px-[140px] flex flex-col md:flex-row gap-8 md:gap-[140px] z-10">
+            <div className="relative lg:absolute w-full lg:w-auto left-0  top-auto lg:top-[911px] mt-8 lg:mt-0 px-4 sm:px-6 lg:px-[140px] flex flex-col lg:flex-row gap-8 lg:gap-[140px] z-10">
               {/* My Role section */}
-              <div className="w-full md:w-[701px] flex flex-col gap-[24px]">
-                <p className="font-['Helvetica_Neue'] font-medium text-[20px] md:text-[24px] leading-[1.25] text-black">
+              <div className="w-full lg:w-[701px] flex flex-col gap-[24px]">
+                <p className="font-['Helvetica_Neue'] font-medium text-[20px] lg:text-[24px] leading-[1.25] text-black">
                   🔥 My Role
                 </p>
-                <div className="font-['Helvetica_Neue'] font-normal text-[16px] md:text-[20px] leading-[1.25] text-[#8a8a8a]">
+                <div className="font-['Helvetica_Neue'] font-normal text-[16px] lg:text-[20px] leading-[1.25] text-[#8a8a8a]">
                   <p className="mb-0">I joined a startup to lead the product and brand design for Lumio, </p>
                   <p>an AI chatbot that simplifies API adoption by integrating into documentation and providing real-time answers—streamlining onboarding and reducing support workload for dev and product teams.</p>
                 </div>
               </div>
 
               {/* Tools section */}
-              <div className="w-full md:w-[135px] flex flex-col gap-[24px]">
-                <p className="font-['Helvetica_Neue'] font-medium text-[20px] md:text-[24px] leading-[1.25] text-black">
+              <div className="w-full lg:w-[135px] flex flex-col gap-[24px]">
+                <p className="font-['Helvetica_Neue'] font-medium text-[20px] lg:text-[24px] leading-[1.25] text-black">
                   Tools
                 </p>
                 <div className="flex gap-[16px] items-center">
@@ -149,13 +149,13 @@ export default function LumioCaseStudy() {
         <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Problem</SectionTitle>
-            <div className="flex flex-col md:flex-row gap-[24px] items-start w-full md:w-[1022px]">
-              <Card title="A wide range of struggles" className="w-full md:w-[440px]">
+            <div className="flex flex-col lg:flex-row gap-[24px] items-start w-full lg:w-[1022px]">
+              <Card title="A wide range of struggles" className="w-full lg:w-[440px]">
                 <p>
                   Depending on who you talk to, open APIs are either too simple, over-engineered, overly academic, too detailed, or too vague. This makes a one-size-fits-all solution nearly impossible.
                 </p>
               </Card>
-              <Card title="Common UX patterns in API documentations" className="w-full md:w-[544px]">
+              <Card title="Common UX patterns in API documentations" className="w-full lg:w-[544px]">
                 <p>
                   Current API adoption support relies on community forums, customer support, user feedback loops, FAQs, and tutorials. While helpful, these methods are often slow and time-consuming for both users and support teams.
                 </p>
@@ -168,20 +168,20 @@ export default function LumioCaseStudy() {
         <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Solution</SectionTitle>
-            <div className="flex flex-col md:flex-row gap-[24px] items-start h-auto md:h-[601px]">
-              <div className="flex flex-col gap-[24px] w-full md:w-[476px]">
-                <Card title="Designing with constrains" className="w-full md:w-[440px]">
+            <div className="flex flex-col lg:flex-row gap-[24px] items-start h-auto lg:h-[601px]">
+              <div className="flex flex-col gap-[24px] w-full lg:w-[476px]">
+                <Card title="Designing with constrains" className="w-full lg:w-[440px]">
                   <p>
                     API adoption is highly context-dependent. Unlike products with standardized user journeys, the way users interact with API documentation varies significantly based on both the API itself and its target users. Given that we had a time schedule of 3 months and I was the only designer, I focused on simplicity while building the MVP.
                   </p>
                 </Card>
-                <Card title="The Vision" className="w-full md:w-[440px]">
+                <Card title="The Vision" className="w-full lg:w-[440px]">
                   <p>
                     A smart and purposeful use of AI: instead of adding to the workload of already busy teams, AI would step in to handle the many questions that arise during the API adoption process. This vision was shaped by the founder's own experience working as a Software Developer and Product Manager.
                   </p>
                 </Card>
               </div>
-              <div className="bg-black rounded-[24px] px-[24px] py-[16px] w-full md:w-[497px] h-auto md:h-[376px] flex flex-col gap-[32px] md:gap-[56px]">
+              <div className="bg-black rounded-[24px] px-[24px] py-[16px] w-full lg:w-[497px] h-auto lg:h-[376px] flex flex-col gap-[32px] lg:gap-[56px]">
                 <div className="flex items-start justify-between">
                   <p className="text-[#bebebe] text-[18px] sm:text-[20px] font-medium font-['Helvetica_Neue'] leading-[1.25]">Problem Statement</p>
                   <div className="w-[50px] sm:w-[60px] h-[38px] sm:h-[45.68px] flex-shrink-0">
@@ -198,7 +198,7 @@ export default function LumioCaseStudy() {
 
         {/* Exploring User Needs Section */}
         <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
-          <div className="flex flex-col gap-[24px] w-full md:w-[1022px]">
+          <div className="flex flex-col gap-[24px] w-full lg:w-[1022px]">
             <SectionSubtitle>Exploring user needs</SectionSubtitle>
             <div className="bg-neutral-50 rounded-[18.68px] p-4 md:p-[32px] relative">
               <div className="mb-[24px]">
@@ -218,7 +218,7 @@ export default function LumioCaseStudy() {
 
         {/* Laying the Foundation Section */}
         <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
-          <div className="mb-[32px] w-full md:w-[404px]">
+          <div className="mb-[32px] w-full lg:w-[404px]">
             <SectionSubtitle className="mb-[24px]">Laying the foundation for the MVP</SectionSubtitle>
             <BodyText>
               By mapping out pain points and user needs,<br /> I narrowed down to focusing on simplification, analytics and real-time assistance for the MVP.
@@ -232,7 +232,7 @@ export default function LumioCaseStudy() {
 
         {/* Market Analysis Section */}
         <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
-          <div className="mb-[32px] w-full md:w-[388px]">
+          <div className="mb-[32px] w-full lg:w-[388px]">
             <SectionSubtitle className="mb-[24px]">How Lumio stands out</SectionSubtitle>
             <BodyText>
               To identify Lumio's strengths and opportunities, I conducted a competitive analysis to explore how other tools handle API adoption.<br /> The result: Lumio stands out by combining <br /> real-time AI assistance with an analytics tool that enables data-driven decisions.
@@ -274,19 +274,19 @@ export default function LumioCaseStudy() {
         {/* Impact & Learnings Section */}
         <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
           <SectionSubtitle className="mb-[32px]">Impact & Learnings</SectionSubtitle>
-          <div className="flex flex-col md:flex-row gap-[24px] md:gap-[36px] w-full md:w-[919px]">
-            <Card title="Improve testing strategy" className="w-full md:w-[440px] h-auto md:h-[283px]">
+          <div className="flex flex-col lg:flex-row gap-[24px] lg:gap-[36px] w-full lg:w-[919px]">
+            <Card title="Improve testing strategy" className="w-full lg:w-[440px] h-auto lg:h-[283px]">
               <p>
                 Our experience at a UX Testing event showed that testing with a general audience was not effective for a tech-heavy SaaS product like Lumio. Future testing should focus on developers and product managers who actively work with APIs to generate more relevant insights.
               </p>
             </Card>
-            <div className="flex flex-col gap-[24px] md:gap-[45px] w-full md:w-auto">
-              <Card title="Expand analytics focus" className="w-full md:w-[440px] h-auto md:h-[191px]">
+            <div className="flex flex-col gap-[24px] lg:gap-[45px] w-full lg:w-auto">
+              <Card title="Expand analytics focus" className="w-full lg:w-[440px] h-auto lg:h-[191px]">
                 <p>
                   While the MVP's analytics module laid the groundwork, expanding these features could strengthen Lumio's value and differentiation.
                 </p>
               </Card>
-              <Card title="Adjust competitive edge" className="w-full md:w-[440px] h-auto md:h-[237px]">
+              <Card title="Adjust competitive edge" className="w-full lg:w-[440px] h-auto lg:h-[237px]">
                 <p>
                   Finally, the competitive landscape has shifted significantly in just one year, underscoring the need for ongoing market monitoring to refine Lumio's positioning and ensure its features remain distinctive.
                 </p>

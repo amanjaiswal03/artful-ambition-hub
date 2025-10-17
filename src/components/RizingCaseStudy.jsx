@@ -69,7 +69,7 @@ export default function RizingCaseStudy() {
 
       <main className="pb-16">
         {/* Hero Section */}
-        <div className="relative w-full overflow-hidden px-4" data-name="Hero">
+        <div className="relative w-full overflow-hidden px-4 md:px-8" data-name="Hero">
           <div className="relative w-full max-w-[1280px] mx-auto min-h-[600px] md:h-[1249px]">
             <div className="hidden md:block absolute h-[1020px] left-1/2 top-[-60px] w-[1280px] transform -translate-x-1/2">
               <div
@@ -96,7 +96,7 @@ export default function RizingCaseStudy() {
 
         {/* My Role and Tools - below hero image */}
         <section className="w-full">
-          <div className="max-w-[1280px] mx-auto px-6 lg:px-[140px] flex flex-col md:flex-row md:justify-between gap-8 md:gap-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-12 lg:px-[140px] flex flex-col md:flex-row md:justify-between gap-8 md:gap-12">
             <div className="w-full md:w-[701px]">
               <div className="mb-4 md:mb-6">
                 <p className="font-['Helvetica_Neue'] font-medium text-[20px] md:text-[24px] leading-[1.25] text-black">🔥 My Role</p>
@@ -134,18 +134,18 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Problem Section */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-12 lg:px-[140px] py-8">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Problem</SectionTitle>
-            <div className="flex flex-col md:flex-row gap-[24px] items-start w-full md:w-[1022px]">
-              <Card title="Shifting the focus" className="w-full md:w-[520px]">
+            <div className="flex flex-col lg:flex-row gap-[24px] items-start w-full lg:w-[1022px]">
+              <Card title="Shifting the focus" className="w-full lg:w-[520px]">
                 <p>
                   The rebranding marked a shift from a female-specific focus to a more gender-neutral approach,
                   reflecting the company's growing and diverse client base. The founder Irene renamed the company
                   Rizing—a name inspired by the Gen Z slang "rizz" (referring to charisma) and the word "rising."
                 </p>
               </Card>
-              <Card title="Scaling the business" className="w-full md:w-[544px]">
+              <Card title="Scaling the business" className="w-full lg:w-[544px]">
                 <p>
                   The new brand identity also lays the foundation for scaling the business beyond 1:1 coaching into
                   working with companies. It speaks directly to a broader target audience: tech and business professionals seeking to elevate their
@@ -157,11 +157,11 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Solution */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-12 lg:px-[140px] py-6 sm:py-8">
           <div className="flex flex-col gap-[24px]">
             <SectionTitle>Solution</SectionTitle>
-            <div className="flex flex-col md:flex-row gap-[24px] items-start w-full md:w-[1022px]">
-              <Card title="Brand Identity" className="w-full md:w-[520px]">
+            <div className="flex flex-col lg:flex-row gap-[24px] items-start w-full lg:w-[1022px]">
+              <Card title="Brand Identity" className="w-full lg:w-[520px]">
                 <p>
                   I created brand assets to match with a trustworthy and dynamic vibe to target Tech professionals who value
                   authenticity and sustainable growth.
@@ -172,13 +172,13 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Logo Development */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-10">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-12 lg:px-[140px] py-10">
           <SectionSubtitle className="mb-4 md:mb-6">Logo Development</SectionSubtitle>
           <ImageSection src={rizingLogoDevelopment} alt="Rizing logo development" />
         </section>
 
         {/* Brand Identity */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-10">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-12 lg:px-[140px] py-10">
           <SectionSubtitle className="mb-4 md:mb-6">Introducing the new brand identity</SectionSubtitle>
           <BodyText className="mb-6 md:mb-8 max-w-full md:max-w-md">
             I created brand assets to match with a trustworthy and dynamic vibe to target Tech professionals who value
@@ -188,25 +188,25 @@ export default function RizingCaseStudy() {
         </section>
 
         {/* Outcome */}
-        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-12 md:py-16">
+        <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-12 lg:px-[140px] py-12 md:py-16">
           <SectionTitle className="mb-4 md:mb-6">Outcome</SectionTitle>
           {/* Outcome Images */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
             {/* First image - full width on left column */}
-            <div className="w-full sm:w-[450px]">
+            <div className="w-full md:w-auto">
               <ImageSection src={rizingOutcome0} alt="Outcome 0" />
             </div>
 
             {/* Empty space on right for desktop layout */}
-            <div className="hidden lg:block"></div>
+            <div className="hidden md:block"></div>
 
             {/* Second image - left column */}
-            <div className="w-full lg:col-start-1">
+            <div className="w-full md:col-start-1">
               <ImageSection src={rizingOutcome1} alt="Outcome 1" />
             </div>
 
             {/* Third image - overlapping on right column (desktop) */}
-            <div className="w-full lg:col-start-2 lg:row-start-2 lg:-ml-16 lg:-mt-16">
+            <div className="w-full md:col-start-2 md:row-start-2 md:-ml-8 lg:-ml-16 md:-mt-8 lg:-mt-16">
               <ImageSection src={rizingOutcome2} alt="Outcome 2" />
             </div>
           </div>
