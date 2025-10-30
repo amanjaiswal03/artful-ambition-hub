@@ -243,9 +243,9 @@ export default function DBCaseStudy() {
         {/* Impact & Learnings */}
         <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-8">
           <div className="mb-6 sm:mb-8">
-            <SectionSubtitle>
+            <SectionTitle>
               Impact & Learnings
-            </SectionSubtitle>
+            </SectionTitle>
           </div>
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 items-start">
             <div className="bg-white rounded-3xl border border-[#bebebe] w-full lg:w-[411px]">

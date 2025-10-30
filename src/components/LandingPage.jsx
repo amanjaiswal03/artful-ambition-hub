@@ -20,7 +20,7 @@ function ProjectCard({ title, description, imageSrc, rotateClass, imageScale = "
   );
 }
 
-function ProjectText({ title, description, maxWidth = "max-w-[280px]" }) {
+function ProjectText({ title, description, maxWidth = "max-w-[300px]" }) {
   const renderDescription = () => {
     if (Array.isArray(description)) {
       return description.map((line, index) => (
@@ -62,12 +62,12 @@ export default function LandingPage() {
         {/* Hero */}
         <section className="max-w-4xl mx-auto pt-16 sm:pt-24 lg:pt-40 pb-12 sm:pb-16 lg:pb-24 text-center px-4 sm:px-6 lg:px-8">
           <h1 className="text-[28px] sm:text-[38px] lg:text-[48px] leading-tight text-[#1A1A25] font-['Helvetica_Neue']">
-            <span>Where others see </span>
-            <span className="text-[#8a8a8a]">problems</span>
+            <span>Turning </span>
+            <span className="text-[#8a8a8a]">insights</span>
           </h1>
           <h2 className="text-[28px] sm:text-[38px] lg:text-[48px] leading-tight text-[#1A1A25] font-['Helvetica_Neue']">
-            <span>I create </span>
-            <span className="text-[#8a8a8a]">solutions</span>
+            <span>into human </span>
+            <span className="text-[#8a8a8a]">experiences</span>
             <span className="align-middle inline-flex ml-2 bg-[#fcf4e9] text-[#1A1A25] rounded-xl sm:rounded-2xl size-8 sm:size-10 items-center justify-center">
               <img src={rocketEmj} alt="rocket" className="w-5 h-5 sm:w-7 sm:h-7" />
             </span>
@@ -89,7 +89,7 @@ export default function LandingPage() {
               <div className="mt-8">
                 <ProjectText
                   title="Deutsche Bahn"
-                  description="Designing a Unified Multi-Item Booking Flow for Deutsche Bahn"
+                  description="Designing a unified multi-item booking flow for Deutsche Bahn"
                 />
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function LandingPage() {
               <div className="mt-8">
                 <ProjectText
                   title="Lumio"
-                  description={["Enabling Faster API Onboarding", "Through Custom Chatbot Dashboard"]}
+                  description={["Enabling faster API onboarding", "through custom chatbot dashboard"]}
                   maxWidth="max-w-[320px]"
                 />
               </div>
@@ -121,7 +121,7 @@ export default function LandingPage() {
               <div className="mt-8">
                 <ProjectText
                   title="Rizing"
-                  description="A Rebrand to Support Growth from 1:1 Coaching to Company Partnerships"
+                  description="A rebrand to support growth from 1:1 coaching to company partnerships"
                 />
               </div>
             </div>
@@ -177,7 +177,7 @@ export default function LandingPage() {
                 <div className="mt-12">
                   <ProjectText
                     title="Rizing"
-                    description="A rebrand to support growth from 1:1 coaching to company partnerships"
+                    description={["A rebrand to support growth from 1:1 ", "coaching to company partnerships"]}
                   />
                 </div>
               </div>
@@ -189,7 +189,7 @@ export default function LandingPage() {
         <section className="max-w-4xl mx-auto py-12 sm:py-20 lg:py-28 flex flex-col items-center gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center mb-2 sm:mb-4">
             <p className="text-[#1A1A25] text-[28px] sm:text-[38px] lg:text-[48px] leading-[36px] sm:leading-[46px] lg:leading-[56px] text-center">
-              Hi, I'm Sonja, a <span className="text-[#8a8a8a]">Product Designer</span> <br />
+              Hi, I'm Sonja,<br className="block sm:hidden" /> a <span className="text-[#8a8a8a]">Product Designer</span> <br />
               from Berlin.
             </p>
           </div>

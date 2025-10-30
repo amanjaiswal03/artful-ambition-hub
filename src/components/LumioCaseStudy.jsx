@@ -73,19 +73,24 @@ export default function LumioCaseStudy() {
       <main className="pb-8 md:pb-16">
         {/* Hero Section - Responsive Design */}
         <div className="relative w-full overflow-hidden bg-gradient-to-b from-white via-white to-transparent" data-name="Hero">
+          {/* Background gradient vector - Full width */}
+          <div className="absolute h-[800px] lg:h-[1136px] left-0 top-[-50px] lg:top-[-95px] w-full opacity-30 lg:opacity-100">
+            <img
+              src={gradientVector}
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Top fade/blur effect to mirror bottom transition */}
+          <div className="absolute top-0 left-0 right-0 h-[120px] lg:h-[160px] bg-gradient-to-b from-white to-transparent pointer-events-none z-[1]" />
+
+          {/* Gradient blur overlay for smooth transition - Full width */}
+          <div className="absolute bg-gradient-to-b from-[rgba(255,255,255,0.08)] from-[53.655%] to-white to-[72.933%] h-[800px] lg:h-[1149px] left-0 top-0 w-full pointer-events-none"
+            data-name="blur"
+          />
+
           <div className="relative w-full max-w-[1280px] mx-auto h-auto pb-8 lg:pb-0 lg:h-[1108px] px-4 lg:px-0">
-            {/* Background gradient vector - Both mobile and desktop */}
-            <div className="absolute h-[800px] lg:h-[1136px] left-1/2 lg:left-0 top-[-50px] lg:top-[-95px] w-full lg:w-[1280px] transform -translate-x-1/2 lg:transform-none opacity-30 lg:opacity-100">
-              <img
-                src={gradientVector}
-                alt=""
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Top fade/blur effect to mirror bottom transition */}
-            <div className="absolute top-0 left-0 right-0 h-[120px] lg:h-[160px] bg-gradient-to-b from-white to-transparent pointer-events-none z-[1]" />
-
             {/* Title - Responsive - Above image on both mobile and desktop */}
             <div className="relative lg:absolute w-full lg:w-[880px] lg:left-[200px] pt-8 lg:pt-0 lg:top-[103px] px-4 lg:px-0 z-10">
               <p className="font-['Helvetica_Neue'] font-normal text-[28px] lg:text-[48px] leading-[1.2] lg:leading-[60px] text-black text-center">
@@ -102,14 +107,9 @@ export default function LumioCaseStudy() {
                   className="w-full h-auto rounded-[15px]"
                 />
                 {/* Bottom fade effect */}
-                <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t  rounded-b-[15px] pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-white via-white to-transparent pointer-events-none"></div>
               </div>
             </div>
-
-            {/* Gradient blur overlay for smooth transition */}
-            <div className="absolute bg-gradient-to-b from-[rgba(255,255,255,0.08)] from-[53.655%] to-white to-[72.933%] h-[800px] lg:h-[1149px] left-0 top-0 w-full pointer-events-none"
-              data-name="blur"
-            />
 
             {/* My Role and Tools sections - Responsive Layout */}
             <div className="relative lg:absolute w-full lg:w-auto left-0  top-auto lg:top-[911px] mt-8 lg:mt-0 px-4 sm:px-6 lg:px-[140px] flex flex-col lg:flex-row gap-8 lg:gap-[140px] z-10">
@@ -246,7 +246,7 @@ export default function LumioCaseStudy() {
 
         {/* Wireframes Section */}
         <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
-          <SectionTitle className="mb-[32px]">Wireframes</SectionTitle>
+          <SectionSubtitle className="mb-[32px]">Wireframes</SectionSubtitle>
           <ImageSection
             src={lumioWireframe}
             alt="Lumio wireframes and design iterations"
@@ -273,7 +273,7 @@ export default function LumioCaseStudy() {
 
         {/* Impact & Learnings Section */}
         <section className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-[140px] py-6 sm:py-8">
-          <SectionSubtitle className="mb-[32px]">Impact & Learnings</SectionSubtitle>
+          <SectionTitle className="mb-[32px]">Impact & Learnings</SectionTitle>
           <div className="flex flex-col lg:flex-row gap-[24px] lg:gap-[36px] w-full lg:w-[919px]">
             <Card title="Improve testing strategy" className="w-full lg:w-[440px] h-auto lg:h-[283px]">
               <p>
