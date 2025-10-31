@@ -74,7 +74,7 @@ export default function LumioCaseStudy() {
         {/* Hero Section - Responsive Design */}
         <div className="relative w-full overflow-hidden bg-gradient-to-b from-white via-white to-transparent" data-name="Hero">
           {/* Background gradient vector - Full width */}
-          <div className="absolute h-[800px] lg:h-[1136px] top-[30px] lg:top-[-95px] w-full opacity-70 lg:opacity-100">
+          <div className="absolute h-[800px] lg:h-[1136px] top-[10px] md:top-[60px] lg:top-[-95px] w-full opacity-70 lg:opacity-100">
             <img
               src={gradientVector}
               alt=""
