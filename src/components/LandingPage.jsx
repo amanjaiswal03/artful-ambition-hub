@@ -3,6 +3,11 @@ import lumioImage from '../../images/lumio.png';
 import rizingImage from '../../images/rizing.png';
 import deutschlandImage from '../../images/DB.png';
 import rocketEmj from '../../images/rocket-emj.svg';
+import sonjaImage from '../../images/Profile/son.png';
+import lizzyImage from '../../images/Profile/liz.png';
+import ahmadImage from '../../images/Others/ahmad.png';
+import ireneImage from '../../images/Others/Irene.png';
+import heikeImage from '../../images/Others/heike.png';
 import NavBar from './NavBar';
 import Footer from './Footer';
 
@@ -185,7 +190,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* About chips */}
+        {/* About: Sonja intro + profile images + chips */}
         <section className="max-w-4xl mx-auto py-12 sm:py-20 lg:py-28 flex flex-col items-center gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center mb-2 sm:mb-4">
             <p className="text-[#1A1A25] text-[28px] sm:text-[38px] lg:text-[48px] leading-[36px] sm:leading-[46px] lg:leading-[56px] text-center">
@@ -193,14 +198,31 @@ export default function LandingPage() {
               from Berlin.
             </p>
           </div>
+          {/* Profile images – cards/labels are baked into the PNGs */}
+          <div className="relative w-[320px] sm:w-[420px] h-[360px] sm:h-[440px] overflow-visible">
+            <img src={sonjaImage} alt="Sonja" className="absolute left-0 top-0 w-[210px] sm:w-[270px] z-10" />
+            <img src={lizzyImage} alt="Lizzy" className="absolute left-[150px] sm:left-[195px] top-[90px] sm:top-[120px] w-[160px] sm:w-[200px] z-20" />
+          </div>
           <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
+            <Chip><span>Master of Arts</span><span>🎓</span></Chip>
+            <Chip><span>Private Chef</span><span>🧄</span></Chip>
             <Chip><span>Critical Thinker</span><span>🧠</span></Chip>
             <Chip><span>Dog Person</span><span>🐩</span></Chip>
-            <Chip><span>Private Chef</span><span>🧄</span></Chip>
-            <Chip><span>Pop-culture Nerd</span><span>🔥</span></Chip>
             <Chip><span>Dry Humorist</span><span>🍸</span></Chip>
-            <Chip><span>Master of Arts</span><span>🎓</span></Chip>
             <Chip><span>Detail Lover</span><span>🕸️</span></Chip>
+            <Chip><span>Pop-culture Nerd</span><span>🔥</span></Chip>
+          </div>
+        </section>
+
+        {/* Testimonials: What others say */}
+        <section className="max-w-5xl mx-auto py-12 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+          <h2 className="text-[#1A1A25] text-[28px] sm:text-[38px] lg:text-[48px] leading-tight text-center mb-10 sm:mb-14">
+            What <span className="text-[#8a8a8a]">others</span> say
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <img src={ahmadImage} alt="Ahmad Ali Saeed, Founder @ Lumio"/>
+            <img src={ireneImage} alt="Irene Yu, Founder @ Rizing"/>
+            <img src={heikeImage} alt="Heike Kraft, Founder @ Lovelane"/>
           </div>
         </section>
 
