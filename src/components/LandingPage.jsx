@@ -200,10 +200,10 @@ export default function LandingPage() {
           </div>
           {/* Profile images – cards/labels are baked into the PNGs */}
           <div className="relative w-[320px] sm:w-[420px] h-[360px] sm:h-[440px] overflow-visible">
-            <img src={sonjaImage} alt="Sonja" className="absolute left-0 top-0 w-[210px] sm:w-[270px] z-10" />
-            <img src={lizzyImage} alt="Lizzy" className="absolute left-[150px] sm:left-[195px] top-[90px] sm:top-[120px] w-[160px] sm:w-[200px] z-20" />
+            <img src={sonjaImage} alt="Sonja" className="absolute left-0 top-0 w-[210px] sm:w-[315px] z-10" />
+            <img src={lizzyImage} alt="Lizzy" className="absolute left-[150px] sm:left-[215px] top-[90px] sm:top-[120px] w-[160px] sm:w-[237px] z-20" />
           </div>
-          <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
+          <div className="flex flex-wrap gap-2 sm:gap-3 justify-center -mt-20 sm:mt-0">
             <Chip><span>Master of Arts</span><span>🎓</span></Chip>
             <Chip><span>Private Chef</span><span>🧄</span></Chip>
             <Chip><span>Critical Thinker</span><span>🧠</span></Chip>
@@ -220,9 +220,9 @@ export default function LandingPage() {
             What <span className="text-[#8a8a8a]">others</span> say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            <img src={ahmadImage} alt="Ahmad Ali Saeed, Founder @ Lumio"/>
-            <img src={ireneImage} alt="Irene Yu, Founder @ Rizing"/>
-            <img src={heikeImage} alt="Heike Kraft, Founder @ Lovelane"/>
+            <img src={ahmadImage} alt="Ahmad Ali Saeed, Founder @ Lumio" className="w-full max-w-[260px] sm:max-w-none mx-auto md:mx-0 rounded-2xl shadow-[3px_3px_40px_15px_rgba(0,0,0,0.06)] object-cover" />
+            <img src={ireneImage} alt="Irene Yu, Founder @ Rizing" className="w-full max-w-[260px] sm:max-w-none mx-auto md:mx-0 rounded-2xl shadow-[3px_3px_40px_15px_rgba(0,0,0,0.06)] object-cover" />
+            <img src={heikeImage} alt="Heike Kraft, Founder @ Lovelane" className="w-full max-w-[260px] sm:max-w-none mx-auto md:mx-0 rounded-2xl shadow-[3px_3px_40px_15px_rgba(0,0,0,0.06)] object-cover" />
           </div>
         </section>
 
